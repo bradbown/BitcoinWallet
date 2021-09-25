@@ -7,7 +7,20 @@ using System.Threading.Tasks;
 
 namespace BitcoinWallet.Wallets
 {
-    public class WalletGenerator
+    internal class WalletGenerator
     {
+        public NBitcoin.Network network;
+        public string walletDirectory;
+
+        public WalletGenerator(NBitcoin.Network network, string walletDirectory)
+        {
+            this.network = network;
+            this.walletDirectory = walletDirectory;
+        }
+
+        public void GenerateWallet(string walletName, string password)
+        {
+
+        }
     }
 }
