@@ -22,6 +22,11 @@
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
+            <Style TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <!-- <Setter Property="CornerRadius" Value="0.5" /> -->
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
