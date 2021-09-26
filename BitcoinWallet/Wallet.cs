@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace BitcoinWallet.Wallets
 {
-    internal class WalletGenerator
+    internal class Wallet
     {
         public NBitcoin.Network network;
         public string walletDirectory;
 
-        public WalletGenerator(NBitcoin.Network network, string walletDirectory)
+        public Wallet(NBitcoin.Network network, string walletDirectory)
         {
             this.network = network;
             this.walletDirectory = walletDirectory;
@@ -20,7 +20,11 @@ namespace BitcoinWallet.Wallets
 
         public void GenerateWallet(string walletName, string password)
         {
+            Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+            ExtKey extKey = mnemonic.DeriveExtKey(password);
 
+            HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
+            ExtPubKey extPubKey = extKey.Neuter();
         }
     }
 }
