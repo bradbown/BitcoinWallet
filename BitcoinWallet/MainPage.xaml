@@ -1,40 +1,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BitcoinWallet.MainPage"
-             BackgroundColor="{DynamicResource SecondaryColor}" >
+             BackgroundColor="{DynamicResource SecondaryColor}">
 
-    <ContentPage.Content>
-        <ScrollView VerticalOptions="Start" Margin="20">
-            <StackLayout>
-                
-                <Label 
-                    Text="Wallets"                
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="46"
-                    HorizontalOptions="Start" 
-                    VerticalOptions="Start" />
+    <ScrollView VerticalOptions="Start" Margin="20">
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*">
+            <Label 
+                Grid.Row="0"
+                Text="Wallets"                 
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="46"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start" />
 
-                <Grid RowSpacing="25" ColumnSpacing="25" VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
-                    <Frame BorderColor="{DynamicResource PrimaryColor}" Padding="2"  BackgroundColor="LightGray">
-                        <StackLayout Grid.Column="0" VerticalOptions="Start" Orientation="Vertical">
-                            <Label 
-                                Text="Add a wallet"
-                                FontSize="18"
-                                Margin="5"/>
+            <Grid Grid.Row="1" VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
+                <Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>
+                <StackLayout Margin="5" >
+                    <Label 
+                        Text="Add a wallet"
+                        FontSize="18" 
+                        Margin="2"/>
 
-                            <Label 
-                                Text="You can have as many as you like!"
-                                FontSize="12"
-                                Margin="5"/>
+                    <Label 
+                        Text="You can have as many as you like!"
+                        FontSize="12"  
+                        Margin="2"/>
 
-                            <Button 
-                                Text="Add Wallet"
-                                FontAttributes="Bold"                                
-                                Margin="5"/>
-                        </StackLayout>
-                    </Frame>
-                </Grid>
-
+                    <Button 
+                        Text="Add Wallet"
+                        FontAttributes="Bold" 
+                        Margin="2"/>
+                </StackLayout>
+            </Grid>
+            
+            <StackLayout Grid.Row="2">
                 <Label 
                     Text="Welcome to .NET Multi-platform App UI"
                     SemanticProperties.HeadingLevel="Level1"
@@ -62,9 +61,7 @@
                     WidthRequest="250"
                     HeightRequest="310"
                     HorizontalOptions="Center" />
-
-
             </StackLayout>
-        </ScrollView>
-    </ContentPage.Content>
+        </Grid>
+    </ScrollView>
 </ContentPage>
