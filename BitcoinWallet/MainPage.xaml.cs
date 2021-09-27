@@ -12,14 +12,17 @@ namespace BitcoinWallet
 
         struct WalletData
         {
-            public Mnemonic mnemonic = null;
-            public ExtKey extKey = null;
+            public Mnemonic mnemonic;
+            public ExtKey extKey;
             public HDFingerprint masterKeyFingerprint;
-            public ExtPubKey extPubKey = null;
+            public ExtPubKey extPubKey;
 
-            public WalletData()
+            public WalletData(Keys keys)
             {
-
+                mnemonic = keys.mnemonic;
+                extKey = keys.extKey;
+                masterKeyFingerprint = keys.masterKeyFingerprint;
+                extPubKey = keys.extPubKey;
             }
 
             public WalletData(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)

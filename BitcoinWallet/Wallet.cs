@@ -18,7 +18,7 @@ namespace BitcoinWallet
             this.walletDirectory = walletDirectory;
         }
 
-        public (Mnemonic, ExtKey, HDFingerprint, ExtPubKey) GenerateWallet(string walletName, string password)
+        public Keys GenerateWallet(string walletName, string password)
         {
             Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
             ExtKey extKey = mnemonic.DeriveExtKey(password);
@@ -26,7 +26,7 @@ namespace BitcoinWallet
             HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
             ExtPubKey extPubKey = extKey.Neuter();            
 
-            return (mnemonic, extKey, masterKeyFingerprint, extPubKey);
+            return new Keys(mnemonic, extKey, masterKeyFingerprint, extPubKey);
         }
     }
 }
