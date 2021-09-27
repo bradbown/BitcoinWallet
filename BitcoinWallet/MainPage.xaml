@@ -29,22 +29,21 @@
                     <Button 
                         Text="Add Wallet"
                         FontAttributes="Bold" 
-                        Margin="2"/>
+                        Margin="2"
+                        Clicked="GenerateWallet"/>
                 </StackLayout>
             </Grid>
             
             <StackLayout Grid.Row="2">
                 <Label 
-                    Text="Welcome to .NET Multi-platform App UI"
+                    Text="Mnemonic: "
                     SemanticProperties.HeadingLevel="Level1"
-                    SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                     FontSize="18"
                     HorizontalOptions="Center" />
 
                 <Label 
-                    Text="Current count: 0"
+                    Text="ExtKey"
                     FontSize="18"
-                    FontAttributes="Bold"
                     x:Name="CounterLabel"
                     HorizontalOptions="Center" />
 
