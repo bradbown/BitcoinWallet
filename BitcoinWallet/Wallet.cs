@@ -18,13 +18,15 @@ namespace BitcoinWallet
             this.walletDirectory = walletDirectory;
         }
 
-        public void GenerateWallet(string walletName, string password)
+        public (Mnemonic, ExtKey, HDFingerprint, ExtPubKey) GenerateWallet(string walletName, string password)
         {
             Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
             ExtKey extKey = mnemonic.DeriveExtKey(password);
 
             HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
-            ExtPubKey extPubKey = extKey.Neuter();
+            ExtPubKey extPubKey = extKey.Neuter();            
+
+            return (mnemonic, extKey, masterKeyFingerprint, extPubKey);
         }
     }
 }
