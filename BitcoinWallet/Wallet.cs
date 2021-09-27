@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BitcoinWallet
 {
-    internal class Wallet
+    public class Wallet
     {
         public NBitcoin.Network network;
         public string walletDirectory;

@@ -13,16 +13,16 @@ namespace BitcoinWallet
         struct WalletData
         {
             public Mnemonic mnemonic = null;
-            public String extKey = null;
-            public String masterKeyFingerprint = null;
-            public String extPubKey = null;
+            public ExtKey extKey = null;
+            public HDFingerprint masterKeyFingerprint;
+            public ExtPubKey extPubKey = null;
 
             public WalletData()
             {
 
             }
 
-            public WalletData(Mnemonic mnemonic, String extKey, String masterKeyFingerprint, String extPubKey)
+            public WalletData(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
             {
                 this.mnemonic = mnemonic;
                 this.extKey = extKey;
