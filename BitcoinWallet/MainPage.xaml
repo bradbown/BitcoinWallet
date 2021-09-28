@@ -42,7 +42,20 @@
                     HorizontalOptions="Center" />
 
                 <Label 
-                    Text="ExtKey"
+                    Text="ExtKey: "
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    x:Name="CounterLabel"
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="HDFingerprint: "
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="ExtPubKey: "
                     FontSize="18"
                     x:Name="CounterLabel"
                     HorizontalOptions="Center" />
