@@ -43,10 +43,17 @@
                     HorizontalOptions="Center" />
 
                 <Label 
-                    Text="Address: "
+                    Text="Address Segwit: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="AddressLabel"
+                    x:Name="AddressSegwitLabel"
+                    HorizontalOptions="Center" />
+
+                <Label 
+                    Text="Address P2PKH: "
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    x:Name="AddressP2PKHLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
