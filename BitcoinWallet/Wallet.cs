@@ -24,7 +24,7 @@ namespace BitcoinWallet
             ExtKey extKey = mnemonic.DeriveExtKey(password);
 
             HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
-            ExtPubKey extPubKey = extKey.Neuter();            
+            ExtPubKey extPubKey = extKey.Neuter();
 
             return new Keys(mnemonic, extKey, masterKeyFingerprint, extPubKey);
         }

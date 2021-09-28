@@ -26,6 +26,10 @@ namespace BitcoinWallet
         {
             wallet = new Wallet(NBitcoin.Network.Main, "walletDirectory");
             keys = wallet.GenerateWallet("walletName", "password");
+
+
+
+            //CounterLabel.Text = $"Current count: {count}";
         }
     }
 }

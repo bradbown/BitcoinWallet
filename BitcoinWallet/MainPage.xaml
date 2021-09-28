@@ -39,25 +39,27 @@
                     Text="Mnemonic: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
+                    x:Name="Mnemonic"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="ExtKey: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="CounterLabel"
+                    x:Name="ExtKey"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="HDFingerprint: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
+                    x:Name="HDFingerprint"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="ExtPubKey: "
                     FontSize="18"
-                    x:Name="CounterLabel"
+                    x:Name="ExtPubKey"
                     HorizontalOptions="Center" />
 
                 <Button 
