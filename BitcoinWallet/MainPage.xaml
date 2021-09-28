@@ -43,6 +43,13 @@
                     HorizontalOptions="Center" />
 
                 <Label 
+                    Text="Address: "
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    x:Name="AddressLabel"
+                    HorizontalOptions="Center" />
+
+                <Label 
                     Text="ExtKey: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
