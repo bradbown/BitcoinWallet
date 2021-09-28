@@ -39,7 +39,6 @@ namespace BitcoinWallet
             AddressSegwitLabel.Text = $"Address Segwit: {keys.extKey.GetWif(NBitcoin.Network.Main).GetPublicKey().WitHash.ScriptPubKey.GetDestinationAddress(NBitcoin.Network.Main)}"; //BECH32 (P2WPKH)
             Console.WriteLine("Address P2PKH: " + AddressP2PKHLabel.Text);
             Console.WriteLine("Address Segwit: " +AddressSegwitLabel.Text);
-            //CounterLabel.Text = $"Current count: {count}";
         }
     }
 }
