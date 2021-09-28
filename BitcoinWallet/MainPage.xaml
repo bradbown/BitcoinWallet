@@ -30,7 +30,7 @@
                         Text="Add Wallet"
                         FontAttributes="Bold" 
                         Margin="2"
-                        Clicked="GenerateWallet"/>
+                        Clicked="OnGenerateWalletClicked"/>
                 </StackLayout>
             </Grid>
             
@@ -39,27 +39,27 @@
                     Text="Mnemonic: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="Mnemonic"
+                    x:Name="MnemonicLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="ExtKey: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="ExtKey"
+                    x:Name="ExtKeyLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="HDFingerprint: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="HDFingerprint"
+                    x:Name="HDFingerprintLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
                     Text="ExtPubKey: "
                     FontSize="18"
-                    x:Name="ExtPubKey"
+                    x:Name="ExtPubKeyLabel"
                     HorizontalOptions="Center" />
 
                 <Button 

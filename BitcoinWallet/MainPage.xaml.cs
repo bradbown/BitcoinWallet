@@ -22,12 +22,19 @@ namespace BitcoinWallet
             count++;
         }
 
+        private void OnGenerateWalletClicked(object sender, EventArgs e)
+        {
+            GenerateWallet();
+        }
+
         private void GenerateWallet()
         {
             wallet = new Wallet(NBitcoin.Network.Main, "walletDirectory");
             keys = wallet.GenerateWallet("walletName", "password");
-
-
+            MnemonicLabel.Text = $"MnemonicLabel: {keys.mnemonic}";
+            ExtKeyLabel.Text = $"ExtKeyLabel: {keys.extKey}";
+            HDFingerprintLabel.Text = $"HDFingerprintLabel: {keys.masterKeyFingerprint}";
+            ExtPubKeyLabel.Text = $"ExtPubKeyLabel: {keys.extPubKey}";
 
             //CounterLabel.Text = $"Current count: {count}";
         }
