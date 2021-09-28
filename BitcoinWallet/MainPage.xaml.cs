@@ -24,16 +24,9 @@ namespace BitcoinWallet
                 masterKeyFingerprint = keys.masterKeyFingerprint;
                 extPubKey = keys.extPubKey;
             }
-
-            public WalletData(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
-            {
-                this.mnemonic = mnemonic;
-                this.extKey = extKey;
-                this.masterKeyFingerprint = masterKeyFingerprint;
-                this.extPubKey = extPubKey;
-            }
-
         }
+
+        Keys keys;
 
 
         public MainPage()
@@ -50,6 +43,8 @@ namespace BitcoinWallet
         {
             wallet = new Wallet(NBitcoin.Network.Main, "walletDirectory");
             WalletData walletData = new WalletData(wallet.GenerateWallet("walletName", "password"));
+
+            keys = new Keys(walletData.mnemonic, walletData.extKey, walletData.masterKeyFingerprint, walletData.extPubKey);
         }
     }
 }
