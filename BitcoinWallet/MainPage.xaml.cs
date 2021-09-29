@@ -10,7 +10,7 @@ namespace BitcoinWallet
         NBitcoin.Network network = NBitcoin.Network.Main;
         Wallet wallet;
 
-        Keys keys;
+        KeyManager keys;
 
         public MainPage()
         {

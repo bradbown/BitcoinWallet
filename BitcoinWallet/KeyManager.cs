@@ -11,7 +11,7 @@ using NBitcoin;
 namespace BitcoinWallet
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public class Keys
+    public class KeyManager
     {
         public Mnemonic mnemonic = null;
         public ExtKey extKey = null;
@@ -19,7 +19,7 @@ namespace BitcoinWallet
         public ExtPubKey extPubKey = null;
 
         [JsonConstructor]
-        public Keys(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
+        public KeyManager(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
         {
             this.mnemonic = mnemonic;
             this.extKey = extKey; 
