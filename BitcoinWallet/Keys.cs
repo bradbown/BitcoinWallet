@@ -32,5 +32,10 @@ namespace BitcoinWallet
             string jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
             File.WriteAllText(filePath, jsonString, Encoding.UTF8);
         }
+
+        public bool DoesFileExist(string filePath)
+        {
+            return File.Exists(filePath);
+        }
     }
 }
