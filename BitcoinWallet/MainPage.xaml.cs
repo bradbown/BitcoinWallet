@@ -19,7 +19,7 @@ namespace BitcoinWallet
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            count++;
+            
         }
 
         private void OnGenerateWalletClicked(object sender, EventArgs e)
