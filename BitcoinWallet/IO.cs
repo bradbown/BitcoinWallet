@@ -21,6 +21,11 @@ namespace BitcoinWallet
             return File.Exists(filePath);
         }
 
+        public static bool DoesDirectoryExist(string directory)
+        {
+            return System.IO.Directory.Exists(directory);
+        }
+
         public static KeyManager ReadFromFile(string filePath)
         {
             return JsonConvert.DeserializeObject<KeyManager>(filePath);
