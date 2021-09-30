@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Security;
 using Newtonsoft.Json;
 using NBitcoin;
@@ -25,17 +24,6 @@ namespace BitcoinWallet
             this.extKey = extKey; 
             this.masterKeyFingerprint = masterKeyFingerprint;
             this.extPubKey = extPubKey;
-        }
-
-        public void WriteToFile(string filePath)
-        {
-            string jsonString = JsonConvert.SerializeObject(this, Formatting.Indented);
-            File.WriteAllText(filePath, jsonString, Encoding.UTF8);
-        }
-
-        public bool DoesFileExist(string filePath)
-        {
-            return File.Exists(filePath);
         }
     }
 }
