@@ -20,5 +20,10 @@ namespace BitcoinWallet
         {
             return File.Exists(filePath);
         }
+
+        public static T ReadFromFile<T>(string filePath)
+        {
+            return JsonConvert.DeserializeObject<T>(filePath);
+        }
     }
 }
