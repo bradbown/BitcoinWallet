@@ -20,13 +20,20 @@ namespace BitcoinWallet
 
         public KeyManager GenerateWallet(string walletName, string password)
         {
-            Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
-            ExtKey extKey = mnemonic.DeriveExtKey(password);
+            if (IO.DoesFileExist(walletDirectory + walletName + ".json"))
+            {
 
-            HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
-            ExtPubKey extPubKey = extKey.Neuter();  
+            }
+            else
+            {
+                Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                ExtKey extKey = mnemonic.DeriveExtKey(password);
 
-            return new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
+                ExtPubKey extPubKey = extKey.Neuter();
+
+                return new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+            }
         }
     }
 }
