@@ -22,7 +22,7 @@ namespace BitcoinWallet
         {
             if (IO.DoesFileExist(walletDirectory + walletName + ".json"))
             {
-
+                
             }
             else
             {

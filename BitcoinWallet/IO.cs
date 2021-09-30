@@ -21,9 +21,9 @@ namespace BitcoinWallet
             return File.Exists(filePath);
         }
 
-        public static T ReadFromFile<T>(string filePath)
+        public static KeyManager ReadFromFile(string filePath)
         {
-            return JsonConvert.DeserializeObject<T>(filePath);
+            return JsonConvert.DeserializeObject<KeyManager>(filePath);
         }
     }
 }
