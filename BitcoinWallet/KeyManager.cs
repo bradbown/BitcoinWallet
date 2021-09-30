@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security;
 using Newtonsoft.Json;
 using NBitcoin;
+using BitcoinWallet.JsonConverters;
 
 namespace BitcoinWallet
 {
@@ -18,7 +19,8 @@ namespace BitcoinWallet
         [JsonProperty]
         public ExtKey extKey = null;
 
-        [JsonProperty]
+        [JsonProperty(Order = 3)]
+        [JsonConverter(typeof(HDFingerprintJsonConverter))]
         public HDFingerprint masterKeyFingerprint;
 
         [JsonProperty]
