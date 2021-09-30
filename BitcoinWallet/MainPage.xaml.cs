@@ -9,11 +9,14 @@ namespace BitcoinWallet
     {
         NBitcoin.Network network = NBitcoin.Network.Main;
         Wallet wallet;
-
         KeyManager keys;
+        string walletDirectory;
+
+        //D:\Projects\Bitcoin\BitcoinWallet\BitcoinWallet\bin\Debug\net6.0-windows10.0.19041\win-x64\.exe
 
         public MainPage()
         {
+            walletDirectory = "......\\";
             InitializeComponent();
         }
 
@@ -29,8 +32,8 @@ namespace BitcoinWallet
 
         private void GenerateWallet()
         {
-            wallet = new Wallet(NBitcoin.Network.Main, "walletDirectory");
-            keys = wallet.GenerateWallet("walletName", "password");
+            wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
+            keys = wallet.GenerateWallet("wallet", "password");
             MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
             HDFingerprintLabel.Text = $"HDFingerprint: {keys.masterKeyFingerprint}";
