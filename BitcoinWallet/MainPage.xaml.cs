@@ -16,7 +16,7 @@ namespace BitcoinWallet
 
         public MainPage()
         {
-            walletDirectory = "......\\";
+            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
             InitializeComponent();
         }
 

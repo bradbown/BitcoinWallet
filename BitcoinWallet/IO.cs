@@ -12,8 +12,21 @@ namespace BitcoinWallet
     {
         public static void WriteToFile<T>(string filePath, ref T fileData)
         {
-            string jsonString = JsonConvert.SerializeObject(fileData, Formatting.Indented);
-            File.WriteAllText(filePath, jsonString, Encoding.UTF8);            
+            string jsonString;
+
+            try
+            {
+                jsonString = JsonConvert.SerializeObject(fileData, Formatting.Indented);
+                File.WriteAllText(filePath, jsonString, Encoding.UTF8);
+            }
+            catch (JsonSerializationException ex)
+            {
+                Console.WriteLine(ex);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }         
         }
 
         public static bool DoesFileExist(string filePath)

@@ -20,9 +20,15 @@ namespace BitcoinWallet
 
         public KeyManager GenerateWallet(string walletName, string password)
         {
-            if (IO.DoesFileExist(walletDirectory + walletName + ".json"))
+            string filePath = walletDirectory + walletName + ".json";
+            if (IO.DoesDirectoryExist(walletDirectory))
             {
-                return IO.ReadFromFile(walletDirectory + walletName + ".json");
+                //Directory doesn't exist
+                Console.WriteLine("directory exists");
+            }
+            if (IO.DoesFileExist(filePath))
+            {
+                return IO.ReadFromFile(filePath);
             }
             else
             {
@@ -32,7 +38,11 @@ namespace BitcoinWallet
                 HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
                 ExtPubKey extPubKey = extKey.Neuter();
 
-                return new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                KeyManager keyManager = new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+
+                IO.WriteToFile(filePath, ref keyManager);
+
+                return keyManager;
             }
         }
     }
