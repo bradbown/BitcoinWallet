@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WalletWasabi.Crypto;
 
 namespace BitcoinWallet.Helpers
 {
@@ -42,19 +41,19 @@ namespace BitcoinWallet.Helpers
 			ExtPubKey epk;
 			try
 			{
-				epk = ExtPubKey.Parse(extPubKeyString, Network.Main); // Starts with "ExtPubKey": "xpub...
+				epk = ExtPubKey.Parse(extPubKeyString, NBitcoin.Network.Main); // Starts with "ExtPubKey": "xpub...
 			}
 			catch
 			{
 				try
 				{
-					epk = ExtPubKey.Parse(extPubKeyString, Network.TestNet); // Starts with "ExtPubKey": "xpub...
+					epk = ExtPubKey.Parse(extPubKeyString, NBitcoin.Network.TestNet); // Starts with "ExtPubKey": "xpub...
 				}
 				catch
 				{
 					try
 					{
-						epk = ExtPubKey.Parse(extPubKeyString, Network.RegTest); // Starts with "ExtPubKey": "xpub...
+						epk = ExtPubKey.Parse(extPubKeyString, NBitcoin.Network.RegTest); // Starts with "ExtPubKey": "xpub...
 					}
 					catch
 					{
@@ -74,17 +73,17 @@ namespace BitcoinWallet.Helpers
 			BitcoinAddress ba;
 			try
 			{
-				ba = BitcoinAddress.Create(bitcoinAddressString, Network.Main);
+				ba = BitcoinAddress.Create(bitcoinAddressString, NBitcoin.Network.Main);
 			}
 			catch
 			{
 				try
 				{
-					ba = BitcoinAddress.Create(bitcoinAddressString, Network.TestNet);
+					ba = BitcoinAddress.Create(bitcoinAddressString, NBitcoin.Network.TestNet);
 				}
 				catch
 				{
-					ba = BitcoinAddress.Create(bitcoinAddressString, Network.RegTest);
+					ba = BitcoinAddress.Create(bitcoinAddressString, NBitcoin.Network.RegTest);
 				}
 			}
 
@@ -98,24 +97,24 @@ namespace BitcoinWallet.Helpers
 			Key k;
 			try
 			{
-				k = Key.Parse(keyString, Network.Main);
+				k = Key.Parse(keyString, NBitcoin.Network.Main);
 			}
 			catch
 			{
 				try
 				{
-					k = Key.Parse(keyString, Network.TestNet);
+					k = Key.Parse(keyString, NBitcoin.Network.TestNet);
 				}
 				catch
 				{
-					k = Key.Parse(keyString, Network.RegTest);
+					k = Key.Parse(keyString, NBitcoin.Network.RegTest);
 				}
 			}
 
 			return k;
 		}
 
-		public static async Task<AddressManager> LoadAddressManagerFromPeerFileAsync(string filePath, Network? expectedNetwork = null)
+		public static async Task<AddressManager> LoadAddressManagerFromPeerFileAsync(string filePath, NBitcoin.Network? expectedNetwork = null)
 		{
 			byte[] data, hash;
 			using (var fs = File.Open(filePath, FileMode.Open, FileAccess.Read))

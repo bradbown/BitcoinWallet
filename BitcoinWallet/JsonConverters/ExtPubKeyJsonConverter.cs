@@ -26,7 +26,7 @@ namespace BitcoinWallet.JsonConverters
 		{
 			var epk = (ExtPubKey)value;
 
-			var xpub = epk.GetWif(Network.Main).ToWif();
+			var xpub = epk.GetWif(NBitcoin.Network.Main).ToWif();
 			writer.WriteValue(xpub);
 		}
 	}
