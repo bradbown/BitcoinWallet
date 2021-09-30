@@ -13,17 +13,15 @@ namespace BitcoinWallet
     [JsonObject(MemberSerialization.OptIn)]
     public class KeyManager
     {
-        [JsonProperty]
         public Mnemonic mnemonic = null;
 
-        [JsonProperty]
         public ExtKey extKey = null;
 
-        [JsonProperty(Order = 3)]
+        [JsonProperty(Order = 1)]
         [JsonConverter(typeof(HDFingerprintJsonConverter))]
         public HDFingerprint masterKeyFingerprint;
 
-        [JsonProperty]
+        [JsonProperty(Order = 2)]
         public ExtPubKey extPubKey = null;
 
         [JsonConstructor]
