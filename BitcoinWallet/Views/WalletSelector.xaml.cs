@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 namespace BitcoinWallet.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WalletSelectorView : ContentView
+    public partial class WalletSelector
     {
-        public WalletSelectorView()
+        public WalletSelector()
         {
             InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }

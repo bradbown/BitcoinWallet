@@ -1,7 +1,9 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BitcoinWallet.MainPage"
-             BackgroundColor="{DynamicResource SecondaryColor}">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:BitcoinWallet.Views"
+    x:Class="BitcoinWallet.MainPage"
+    BackgroundColor="{DynamicResource SecondaryColor}">
 
     <ScrollView VerticalOptions="Start" Margin="20">
         <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*">
