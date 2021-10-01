@@ -2,6 +2,7 @@
 using Microsoft.Maui.Essentials;
 using System;
 using NBitcoin;
+using System.Windows.Input;
 
 namespace BitcoinWallet
 {
@@ -18,13 +19,18 @@ namespace BitcoinWallet
         {
             walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
             InitializeComponent();
+            GenerateWallet = new Command(OnGenerateWallet);
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
             
         }
-        public void GenerateWallet()
+
+        public ICommand GenerateWallet { get; }
+        
+
+        public void OnGenerateWallet()
         {
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");

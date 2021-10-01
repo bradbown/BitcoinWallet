@@ -19,6 +19,7 @@
                     Margin="2"/>
 
                 <Button
+                    Command="{Binding BitcoinWallet.MainPage.GenerateWallet}"
                     Text="Add Wallet"
                     FontAttributes="Bold" 
                     Margin="2"/>
