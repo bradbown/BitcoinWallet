@@ -15,27 +15,8 @@
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
 
-            <Grid Grid.Row="1" VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
-                <Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>
-                <StackLayout Margin="5" >
-                    <Label 
-                        Text="Add a wallet"
-                        FontSize="18" 
-                        Margin="2"/>
+            <v:WalletSelector Grid.Row="1"/>
 
-                    <Label 
-                        Text="You can have as many as you like!"
-                        FontSize="12"  
-                        Margin="2"/>
-
-                    <Button 
-                        Text="Add Wallet"
-                        FontAttributes="Bold" 
-                        Margin="2"
-                        Clicked="OnGenerateWalletClicked"/>
-                </StackLayout>
-            </Grid>
-            
             <StackLayout Grid.Row="2">
                 <Label 
                     Text="Mnemonic: "

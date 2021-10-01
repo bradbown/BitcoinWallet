@@ -26,12 +26,12 @@ namespace BitcoinWallet
                 //Directory doesn't exist
                 Console.WriteLine("directory exists");
             }
-            if (IO.DoesFileExist(filePath))
-            {
-                return IO.ReadFromFile(filePath);
-            }
-            else
-            {
+            //if (IO.DoesFileExist(filePath))
+            //{
+            //    return IO.ReadFromFile(filePath);
+            //}
+            //else
+            //{
                 Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
                 ExtKey extKey = mnemonic.DeriveExtKey(password);
 
@@ -43,7 +43,7 @@ namespace BitcoinWallet
                 IO.WriteToFile(filePath, ref keyManager);
 
                 return keyManager;
-            }
+            //}
         }
     }
 }

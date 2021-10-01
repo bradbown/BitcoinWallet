@@ -24,13 +24,7 @@ namespace BitcoinWallet
         {
             
         }
-
-        private void OnGenerateWalletClicked(object sender, EventArgs e)
-        {
-            GenerateWallet();
-        }
-
-        private void GenerateWallet()
+        public void GenerateWallet()
         {
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");
@@ -41,7 +35,7 @@ namespace BitcoinWallet
             AddressP2PKHLabel.Text = $"Address P2PKH: {keys.extKey.GetWif(network).GetPublicKey().Hash.GetAddress(NBitcoin.Network.Main)}"; //BASE58 (P2PKH)
             AddressSegwitLabel.Text = $"Address Segwit: {keys.extKey.GetWif(network).GetPublicKey().WitHash.ScriptPubKey.GetDestinationAddress(NBitcoin.Network.Main)}"; //BECH32 (P2WPKH)
             Console.WriteLine("Address P2PKH: " + AddressP2PKHLabel.Text);
-            Console.WriteLine("Address Segwit: " +AddressSegwitLabel.Text);
+            Console.WriteLine("Address Segwit: " + AddressSegwitLabel.Text);
         }
     }
 }

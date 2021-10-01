@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="BitcoinWallet.Views.WalletSelector">
+    
+    <ContentView.Content>
+        <Grid VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
+            <Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>
+            <StackLayout Margin="5" >
+                <Label 
+                    Text="Add a wallet"
+                    FontSize="18" 
+                    Margin="2"/>
+
+                <Label
+                    Text="You can have as many as you like!"
+                    FontSize="12"  
+                    Margin="2"/>
+
+                <Button
+                    Text="Add Wallet"
+                    FontAttributes="Bold" 
+                    Margin="2"/>
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+    
+</ContentView>
