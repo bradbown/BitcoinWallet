@@ -24,7 +24,7 @@
 
             <StackLayout Grid.Row="2">
                 <Label 
-                    Text="{Binding WalletDisplay.mnemonic}"
+                    Text="{Binding MnemonicDisplay}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center" />
@@ -44,23 +44,17 @@
                     HorizontalOptions="Center" />-->
 
                 <Label 
-                    Text="ExtKey: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="ExtKeyLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
-                    Text="HDFingerprint: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
-                    x:Name="HDFingerprintLabel"
                     HorizontalOptions="Center" />
 
                 <Label 
-                    Text="ExtPubKey: "
                     FontSize="18"
-                    x:Name="ExtPubKeyLabel"
                     HorizontalOptions="Center" />
 
                 <!--<Button 

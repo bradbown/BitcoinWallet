@@ -25,6 +25,7 @@ namespace BitcoinWallet
         [JsonConverter(typeof(ExtPubKeyJsonConverter))]
         public ExtPubKey extPubKey = null;
 
+
         [JsonConstructor]
         public KeyManager(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
         {
@@ -32,7 +33,6 @@ namespace BitcoinWallet
             this.extKey = extKey; 
             this.masterKeyFingerprint = masterKeyFingerprint;
             this.extPubKey = extPubKey;
-
         }
     }
 }
