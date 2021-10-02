@@ -1,33 +1,34 @@
 ﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Essentials;
 using System;
-using NBitcoin;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using NBitcoin;
 
-namespace BitcoinWallet
+namespace BitcoinWallet.ViewModel
 {
-    public partial class MainPage : ContentPage
+    public class MainViewModel : BindableObject
     {
-        NBitcoin.Network network = NBitcoin.Network.Main;
         Wallet wallet;
         KeyManager keys;
         string walletDirectory;
 
         //D:\Projects\Bitcoin\BitcoinWallet\BitcoinWallet\bin\Debug\net6.0-windows10.0.19041\win-x64\.exe
 
-        public MainPage()
+        public MainViewModel()
         {
-            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
-            InitializeComponent();
+            GenerateWallet = new Command(OnGenerateWallet);
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            
+
         }
 
         public ICommand GenerateWallet { get; }
-        
+
 
         public void OnGenerateWallet()
         {
