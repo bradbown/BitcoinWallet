@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using NBitcoin;
 
-namespace BitcoinWallet.ViewModel
+namespace BitcoinWallet.ViewModels
 {
     public class MainViewModel : BindableObject
     {
@@ -31,7 +31,11 @@ namespace BitcoinWallet.ViewModel
             get => keys;
             set
             {
+                if (value == keys)
+                    return;
 
+                keys = value;
+                OnPropertyChanged();
             }
         }
 
