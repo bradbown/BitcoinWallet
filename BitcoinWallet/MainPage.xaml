@@ -4,7 +4,8 @@
     xmlns:v="clr-namespace:BitcoinWallet.Views"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:Class="BitcoinWallet.MainPage"
-    BackgroundColor="{DynamicResource SecondaryColor}">
+    BackgroundColor="{DynamicResource SecondaryColor}"
+    x:DataType="viewmodels:MainViewModel">
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>
@@ -23,23 +24,24 @@
 
             <StackLayout Grid.Row="2">
                 <Label 
+                    Text="{Binding WalletDisplay.mnemonic}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center" />
 
-                <Label 
-                    Text="Address Segwit: "
+                <!--<Label 
+                    Text="{}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     x:Name="AddressSegwitLabel"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center" />-->
 
-                <Label 
+                <!--<Label 
                     Text="Address P2PKH: "
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     x:Name="AddressP2PKHLabel"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center" />-->
 
                 <Label 
                     Text="ExtKey: "

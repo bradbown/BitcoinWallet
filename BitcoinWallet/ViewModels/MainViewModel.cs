@@ -48,10 +48,10 @@ namespace BitcoinWallet.ViewModels
             ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
             HDFingerprintLabel.Text = $"HDFingerprint: {keys.masterKeyFingerprint}";
             ExtPubKeyLabel.Text = $"ExtPubKey: {keys.extPubKey}";
-            AddressP2PKHLabel.Text = $"Address P2PKH: {keys.extKey.GetWif(network).GetPublicKey().Hash.GetAddress(NBitcoin.Network.Main)}"; //BASE58 (P2PKH)
-            AddressSegwitLabel.Text = $"Address Segwit: {keys.extKey.GetWif(network).GetPublicKey().WitHash.ScriptPubKey.GetDestinationAddress(NBitcoin.Network.Main)}"; //BECH32 (P2WPKH)
-            Console.WriteLine("Address P2PKH: " + AddressP2PKHLabel.Text);
-            Console.WriteLine("Address Segwit: " + AddressSegwitLabel.Text);
+            //AddressP2PKHLabel.Text = $"Address P2PKH: {keys.extKey.GetWif(network).GetPublicKey().Hash.GetAddress(NBitcoin.Network.Main)}"; //BASE58 (P2PKH)
+            //AddressSegwitLabel.Text = $"Address Segwit: {keys.extKey.GetWif(network).GetPublicKey().WitHash.ScriptPubKey.GetDestinationAddress(NBitcoin.Network.Main)}"; //BECH32 (P2WPKH)
+            //Console.WriteLine("Address P2PKH: " + AddressP2PKHLabel.Text);
+            //Console.WriteLine("Address Segwit: " + AddressSegwitLabel.Text);
         }
     }
 }
