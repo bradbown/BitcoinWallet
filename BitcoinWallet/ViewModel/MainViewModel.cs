@@ -11,6 +11,7 @@ namespace BitcoinWallet.ViewModel
 {
     public class MainViewModel : BindableObject
     {
+        NBitcoin.Network network = NBitcoin.Network.Main;
         Wallet wallet;
         KeyManager keys;
         string walletDirectory;
@@ -20,14 +21,19 @@ namespace BitcoinWallet.ViewModel
         public MainViewModel()
         {
             GenerateWallet = new Command(OnGenerateWallet);
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-
-        }
+            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
+        }        
 
         public ICommand GenerateWallet { get; }
+
+        public KeyManager WalletDisplay
+        {
+            get => keys;
+            set
+            {
+
+            }
+        }
 
 
         public void OnGenerateWallet()

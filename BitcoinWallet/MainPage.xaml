@@ -59,12 +59,12 @@
                     x:Name="ExtPubKeyLabel"
                     HorizontalOptions="Center" />
 
-                <Button 
+                <!--<Button 
                     Text="Click me"
                     FontAttributes="Bold"
                     SemanticProperties.Hint="Counts the number of times you click"
                     Clicked="OnCounterClicked"
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center" />-->
 
                 <Image
                     Source="dotnet_bot.png"
