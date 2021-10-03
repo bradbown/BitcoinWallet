@@ -11,7 +11,7 @@
     
     <ContentView.Content>
         <Grid VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
-            <Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>
+            <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
             <StackLayout Margin="5" >
                 <Label 
                     Text="Add a wallet"
@@ -28,6 +28,12 @@
                     Text="Add Wallet"
                     FontAttributes="Bold" 
                     Margin="2"/>
+
+                <Label 
+                    Text="{Binding MnemonicDisplay}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center" />
             </StackLayout>
         </Grid>
     </ContentView.Content>

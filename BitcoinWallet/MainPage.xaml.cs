@@ -11,7 +11,6 @@ namespace BitcoinWallet
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = this;
         }
     }
 }
