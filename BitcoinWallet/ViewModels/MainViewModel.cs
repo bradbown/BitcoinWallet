@@ -9,12 +9,12 @@ using NBitcoin;
 
 namespace BitcoinWallet.ViewModels
 {
-    public class MainViewModel : BindableObject
+    internal class MainViewModel : BindableObject
     {
-        NBitcoin.Network network = NBitcoin.Network.Main;
-        Wallet wallet;
-        KeyManager keys;
-        string walletDirectory;
+        public NBitcoin.Network network = NBitcoin.Network.Main;
+        public Wallet wallet;
+        public KeyManager keys;
+        public string walletDirectory;
 
         public string mnemonicDisplay;
 

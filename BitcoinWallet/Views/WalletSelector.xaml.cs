@@ -5,7 +5,7 @@ using BitcoinWallet;
 
 namespace BitcoinWallet.Views
 {
-    public partial class WalletSelector : Microsoft.Maui.Controls.ContentView
+    public partial class WalletSelector : ContentView
     {
         public WalletSelector()
         {

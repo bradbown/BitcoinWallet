@@ -11,7 +11,7 @@ using BitcoinWallet.JsonConverters;
 namespace BitcoinWallet
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public class KeyManager
+    internal class KeyManager
     {
         public Mnemonic mnemonic;
 
