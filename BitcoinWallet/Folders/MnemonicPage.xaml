@@ -5,7 +5,7 @@
     x:Class="BitcoinWallet.MnemonicPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Please write down your mnemonic phrases!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
