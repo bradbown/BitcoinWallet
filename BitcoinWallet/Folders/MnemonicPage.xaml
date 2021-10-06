@@ -6,9 +6,12 @@
     BackgroundColor="{DynamicResource SecondaryColor}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Please write down your mnemonic phrases!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Please write down your mnemonic phrases in order!"
+                SemanticProperties.HeadingLevel="Level1"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Label />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
