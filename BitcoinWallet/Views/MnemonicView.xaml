@@ -5,7 +5,12 @@
     x:Class="BitcoinWallet.Views.MnemonicView">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+            <Label />
+        </StackLayout>
   </ContentView.Content>
 </ContentView>

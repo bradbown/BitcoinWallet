@@ -10,13 +10,6 @@
                 SemanticProperties.HeadingLevel="Level1"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />
             
         </StackLayout>
     </ContentPage.Content>
