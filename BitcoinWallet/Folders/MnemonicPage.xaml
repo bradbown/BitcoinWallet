@@ -11,9 +11,10 @@
                 SemanticProperties.HeadingLevel="Level1"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
-            
-            
-            
+
+            <v:MnemonicView />
+            <v:MnemonicView />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
