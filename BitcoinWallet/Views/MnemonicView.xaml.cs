@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using Microsoft.Maui.Controls;
+using Microsoft.Maui.Essentials;
 
 namespace BitcoinWallet.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MnemonicView : ContentView
     {
         public MnemonicView()
