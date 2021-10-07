@@ -25,8 +25,6 @@ namespace BitcoinWallet.ViewModels
             GenerateWallet = new Command(OnGenerateWallet);
             walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
-            keys = wallet.GenerateWallet("wallet", "password");
-            MnemonicDisplay = "";
             BindingContext = this;
         }
 
