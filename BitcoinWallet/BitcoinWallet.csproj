@@ -52,7 +52,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Folders\MnemonicPage.xaml">
+	  <EmbeddedResource Include="Pages\MnemonicPage.xaml">
 	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 	  </EmbeddedResource>
 	  <EmbeddedResource Include="Views\MnemonicView.xaml">

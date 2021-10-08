@@ -43,7 +43,9 @@ namespace BitcoinWallet
 
                 IO.WriteToFile(filePath, ref keyManager);
 
-                return keyManager;
+            (App.Current.MainPage as NavigationPage).PushAsync(new MnemonicPage());
+
+            return keyManager;
             //}
         }
     }

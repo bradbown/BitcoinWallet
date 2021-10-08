@@ -10,7 +10,6 @@
             <Label />
             <Label />
             <Label />
-            <Label />
         </StackLayout>
   </ContentView.Content>
 </ContentView>
