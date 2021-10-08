@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Essentials;
 
-
-namespace BitcoinWallet
+namespace BitcoinWallet.Pages
 {
-    public partial class MnemonicPage : ContentPage
+    public partial class MnemonicsPage : ContentPage
     {
-        public MnemonicPage()
+        public MnemonicsPage()
         {
             InitializeComponent();
         }
     }
 }
+
