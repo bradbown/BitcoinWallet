@@ -48,6 +48,8 @@ namespace BitcoinWallet.ViewModels
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");
             MnemonicDisplay = $"Mnemonic: {keys.mnemonic.ToString()}";
+
+            
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             //ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
             //HDFingerprintLabel.Text = $"HDFingerprint: {keys.masterKeyFingerprint}";
