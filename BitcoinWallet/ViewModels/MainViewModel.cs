@@ -32,7 +32,14 @@ namespace BitcoinWallet.ViewModels
 
         public string MnemonicDisplay
         {
-            get => keys.mnemonic.ToString();
+            get
+            {
+                if(keys != null)
+                    return keys.mnemonic.ToString();
+                else
+                    return "";
+            }
+
             set
             {
                 if (value == mnemonicDisplay)
@@ -47,7 +54,8 @@ namespace BitcoinWallet.ViewModels
         {
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");
-            MnemonicDisplay = $"Mnemonic: {keys.mnemonic.ToString()}";
+            if(keys != null)
+                MnemonicDisplay = $"Mnemonic: {keys.mnemonic.ToString()}";
 
             
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
