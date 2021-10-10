@@ -5,7 +5,7 @@
     NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
