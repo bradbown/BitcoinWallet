@@ -1,8 +1,7 @@
 ﻿<ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="BitcoinWallet.Pages.MnemonicPage"
-    NavigationPage.HasNavigationBar="false">
+    x:Class="BitcoinWallet.Pages.MnemonicPage">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"

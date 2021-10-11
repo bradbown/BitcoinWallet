@@ -5,8 +5,7 @@
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:Class="BitcoinWallet.MainPage"
     BackgroundColor="{DynamicResource SecondaryColor}"
-    x:DataType="viewmodels:MainViewModel"
-    NavigationPage.HasNavigationBar="false">
+    x:DataType="viewmodels:MainViewModel" >
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>
