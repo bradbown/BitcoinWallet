@@ -5,21 +5,25 @@
     x:Class="BitcoinWallet.Views.MnemonicView"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:DataType="viewmodels:MainViewModel">
-  <ContentView.Content>
-      <StackLayout>
+    <ContentView.BindingContext>
+        <viewmodels:MainViewModel/>
+    </ContentView.BindingContext>
+    
+    <ContentView.Content>
+        <StackLayout>
             <Label />
             <Label />
             <Label />
             <Label />
             <Label />
             <Label />
-
+            
             <Label />
             <Label />
             <Label />
             <Label />
             <Label />
-            <Label />
+            <Label />        
         </StackLayout>
-  </ContentView.Content>
+    </ContentView.Content>
 </ContentView>
