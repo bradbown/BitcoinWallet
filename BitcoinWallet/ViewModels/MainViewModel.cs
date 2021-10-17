@@ -16,8 +16,6 @@ namespace BitcoinWallet.ViewModels
         public KeyManager keys;
         public string walletDirectory;
 
-        public string mnemonicDisplay;
-
         //D:\Projects\Bitcoin\BitcoinWallet\BitcoinWallet\bin\Debug\net6.0-windows10.0.19041\win-x64\.exe
 
         public MainViewModel()
@@ -29,22 +27,22 @@ namespace BitcoinWallet.ViewModels
 
         public ICommand GenerateWallet { get; }
 
-        public string MnemonicDisplay
+        public Mnemonic MnemonicDisplay
         {
             get
             {
                 if (keys != null)
-                    return keys.mnemonic.ToString();
+                    return keys.mnemonic;
                 else
-                    return "";
+                    return null;
             }
 
             set
             {
-                if (value == mnemonicDisplay)
+                if (value == keys.mnemonic)
                     return;
 
-                mnemonicDisplay = value.ToString();
+                MnemonicDisplay = value;
                 OnPropertyChanged(nameof(MnemonicDisplay));
             }
         }
@@ -54,7 +52,7 @@ namespace BitcoinWallet.ViewModels
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");
             if(keys != null)
-                MnemonicDisplay = $"Mnemonic: {keys.mnemonic}";
+                MnemonicDisplay = keys.mnemonic;
 
             
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
