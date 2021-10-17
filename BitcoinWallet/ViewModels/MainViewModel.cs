@@ -27,22 +27,20 @@ namespace BitcoinWallet.ViewModels
 
         public ICommand GenerateWallet { get; }
 
+        public Mnemonic mnemonicDisplay;
         public Mnemonic MnemonicDisplay
         {
             get
             {
-                if (keys != null)
-                    return keys.mnemonic;
-                else
-                    return null;
+                return keys != null ? mnemonicDisplay : null;
             }
 
             set
             {
-                if (value == keys.mnemonic)
+                if (value == mnemonicDisplay)
                     return;
 
-                MnemonicDisplay = value;
+                mnemonicDisplay = value;
                 OnPropertyChanged(nameof(MnemonicDisplay));
             }
         }

@@ -9,6 +9,7 @@ namespace BitcoinWallet.Views
         public MnemonicView()
         {
             InitializeComponent();
+            
         }
     }
 }

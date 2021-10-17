@@ -11,19 +11,31 @@
     
     <ContentView.Content>
         <StackLayout>
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />
+            <Label 
+                Text="{Binding MnemonicDisplay.Words[0]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[1]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[2]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[3]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[4]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[5]}"/>
             
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />
-            <Label />        
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[6]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[7]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[8]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[9]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[10]}"/>
+            <Label  
+                Text="{Binding MnemonicDisplay.Words[11]}"/>        
         </StackLayout>
     </ContentView.Content>
 </ContentView>
