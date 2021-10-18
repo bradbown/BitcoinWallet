@@ -22,7 +22,6 @@ namespace BitcoinWallet.ViewModels
         {
             GenerateWallet = new Command(OnGenerateWallet);
             walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
-            BindingContext = this;
         }
 
         public ICommand GenerateWallet { get; }
@@ -30,10 +29,7 @@ namespace BitcoinWallet.ViewModels
         public Mnemonic mnemonicDisplay;
         public Mnemonic MnemonicDisplay
         {
-            get
-            {
-                return keys != null ? mnemonicDisplay : null;
-            }
+            get => keys != null ? mnemonicDisplay : null;
 
             set
             {
@@ -52,7 +48,7 @@ namespace BitcoinWallet.ViewModels
             if(keys != null)
                 MnemonicDisplay = keys.mnemonic;
 
-            
+
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             //ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
             //HDFingerprintLabel.Text = $"HDFingerprint: {keys.masterKeyFingerprint}";
