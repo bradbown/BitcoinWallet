@@ -2,7 +2,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="BitcoinWallet.Pages.MnemonicPage"
-    xmlns:v="clr-namespace:BitcoinWallet.Views">
+    xmlns:v="clr-namespace:BitcoinWallet.Views"
+    xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
+    x:DataType="viewmodels:MainViewModel">
+    <ContentPage.BindingContext>
+        <viewmodels:MainViewModel/>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
