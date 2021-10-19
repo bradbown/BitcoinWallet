@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using NBitcoin;
+using System.ComponentModel;
 
 namespace BitcoinWallet.ViewModels
 {
-    internal class MainViewModel : BindableObject
+    internal class MainViewModel : INotifyPropertyChanged
     {
         public NBitcoin.Network network = NBitcoin.Network.Main;
         public Wallet wallet;
@@ -27,6 +28,9 @@ namespace BitcoinWallet.ViewModels
         public ICommand GenerateWallet { get; }
 
         Mnemonic mnemonicDisplay;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public Mnemonic MnemonicDisplay
         {
             get => keys != null ? mnemonicDisplay : null;
@@ -37,7 +41,7 @@ namespace BitcoinWallet.ViewModels
                     return;
 
                 mnemonicDisplay = value;
-                OnPropertyChanged(nameof(MnemonicDisplay));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MnemonicDisplay"));
             }
         }
 
