@@ -22,14 +22,13 @@
 
             <v:WalletSelector Grid.Row="1"/>
 
-            <StackLayout Grid.Row="2">
+            <v:MnemonicView Grid.Row="2"/>
+            <StackLayout Grid.Row="3">
                 <Label 
-                    Text="{Binding MnemonicDisplay, Mode=TwoWay}"
+                    Text="{Binding MnemonicDisplay}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center" />
-
-                
 
                 <!--<Label 
                     Text="{}"

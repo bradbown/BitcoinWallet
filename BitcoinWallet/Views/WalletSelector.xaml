@@ -8,7 +8,7 @@
     <ContentView.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentView.BindingContext>
-    
+
     <ContentView.Content>
         <Grid VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
             <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
@@ -30,12 +30,16 @@
                     Margin="2"/>
 
                 <Label 
-                    Text="{Binding MnemonicDisplay}"
+                    Text="{Binding MnemonicDisplay.Words[0]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
+                    HorizontalOptions="Center" />
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[1]}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="32"
                     HorizontalOptions="Center" />
             </StackLayout>
         </Grid>
     </ContentView.Content>
-    
 </ContentView>
