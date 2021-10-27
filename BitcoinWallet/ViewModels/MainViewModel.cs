@@ -52,6 +52,7 @@ namespace BitcoinWallet.ViewModels
             if(keys != null)
                 MnemonicDisplay = keys.mnemonic;
 
+            (App.Current.MainPage as NavigationPage).PushAsync(new Pages.MnemonicPage(keys.mnemonic));
 
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             //ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
