@@ -20,24 +20,30 @@
                 FontSize="46"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
-            
+
             <Grid 
+                Grid.Row="1"
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
                 <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
                 <Border 
-                    Grid.Row="1"
                     Padding="16,8"
                     Stroke="#512bdf"
-                    Background="White"
+                    Background="Silver"
                     StrokeThickness="4"
                     HorizontalOptions="Center">
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="40,0,0,40"/>
                     </Border.StrokeShape>
 
-                    <StackLayout Margin="5" >
+                    <Border.Shadow>
+                        <Shadow Brush="#000000" 
+                                Offset="20,20"
+                                Radius="40"
+                                Opacity="0.8"/>
+                    </Border.Shadow>
 
+                    <StackLayout Margin="5" >
                         <Label 
                             Text="Add a wallet"
                             FontSize="18" 
@@ -57,8 +63,7 @@
                 </Border>
             </Grid>
 
-            <v:MnemonicView Grid.Row="2"/>
-            <StackLayout Grid.Row="3">
+            <StackLayout Grid.Row="2">
                 <Label 
                     Text="{Binding MnemonicDisplay}"
                     SemanticProperties.HeadingLevel="Level1"
