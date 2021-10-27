@@ -52,18 +52,18 @@
                     HorizontalOptions="Center" />
 
                 <!--<Label 
-                    Text="{}"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    x:Name="AddressSegwitLabel"
-                    HorizontalOptions="Center" />-->
+                     Text="{}"
+                     SemanticProperties.HeadingLevel="Level1"
+                     FontSize="18"
+                     x:Name="AddressSegwitLabel"
+                     HorizontalOptions="Center" />-->
 
                 <!--<Label 
-                    Text="Address P2PKH: "
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    x:Name="AddressP2PKHLabel"
-                    HorizontalOptions="Center" />-->
+                     Text="Address P2PKH: "
+                     SemanticProperties.HeadingLevel="Level1"
+                     FontSize="18"
+                     x:Name="AddressP2PKHLabel"
+                     HorizontalOptions="Center" />-->
 
                 <Label 
                     SemanticProperties.HeadingLevel="Level1"
@@ -80,11 +80,11 @@
                     HorizontalOptions="Center" />
 
                 <!--<Button 
-                    Text="Click me"
-                    FontAttributes="Bold"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Center" />-->
+                     Text="Click me"
+                     FontAttributes="Bold"
+                     SemanticProperties.Hint="Counts the number of times you click"
+                     Clicked="OnCounterClicked"
+                     HorizontalOptions="Center" />-->
 
                 <Image
                     Source="dotnet_bot.png"

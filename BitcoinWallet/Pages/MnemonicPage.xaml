@@ -12,11 +12,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
-                    SemanticProperties.HeadingLevel="Level1"   
-                    FontSize="24"
-                    Padding="10"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+                   SemanticProperties.HeadingLevel="Level1"   
+                   FontSize="24"
+                   Padding="10"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
 
             <StackLayout>
                 <Label 
