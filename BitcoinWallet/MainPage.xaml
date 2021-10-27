@@ -20,19 +20,22 @@
                 FontSize="46"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
+            
+            <Grid 
+                VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
+                <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
+                <Border 
+                    Grid.Row="1"
+                    Padding="16,8"
+                    Stroke="#512bdf"
+                    Background="White"
+                    StrokeThickness="4"
+                    HorizontalOptions="Center">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="40,0,0,40"/>
+                    </Border.StrokeShape>
 
-            <Border 
-                Grid.Row="1"
-                Padding="16,8"
-                Stroke="#512bdf"
-                Background="White"
-                StrokeThickness="4"
-                HorizontalOptions="Center">
-                
-                <Grid 
-                    VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
-                    <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
                     <StackLayout Margin="5" >
 
                         <Label 
@@ -51,10 +54,8 @@
                             FontAttributes="Bold" 
                             Margin="2"/>
                     </StackLayout>
-                </Grid>
-            </Border>
-            
-            
+                </Border>
+            </Grid>
 
             <v:MnemonicView Grid.Row="2"/>
             <StackLayout Grid.Row="3">
