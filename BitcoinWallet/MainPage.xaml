@@ -47,7 +47,7 @@
 
             <StackLayout Grid.Row="2">
                 <Label 
-                    Text="{Binding MnemonicDisplay}"
+                    Text=""
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center" />
