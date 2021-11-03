@@ -12,6 +12,7 @@
 
     <ScrollView VerticalOptions="Start" Margin="20">
         <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,*">
+            
             <Label 
                 Grid.Row="0"
                 Text="Wallets"                 
@@ -20,10 +21,31 @@
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
 
-            <v:WalletSelector Grid.Row="1"/>
+            <Grid 
+                Grid.Row="1"
+                VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
+                <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
-            <v:MnemonicView Grid.Row="2"/>
-            <StackLayout Grid.Row="3">
+                <StackLayout Margin="5" >
+                    <Label 
+                        Text="Add a wallet"
+                        FontSize="18" 
+                        Margin="2"/>
+
+                    <Label
+                        Text="You can have as many as you like!"
+                        FontSize="12"  
+                        Margin="2"/>
+
+                    <Button
+                        Command="{Binding GenerateWallet}"
+                        Text="Add Wallet"
+                        FontAttributes="Bold" 
+                        Margin="2"/>
+                </StackLayout>
+            </Grid>
+
+            <StackLayout Grid.Row="2">
                 <Label 
                     Text="{Binding MnemonicDisplay}"
                     SemanticProperties.HeadingLevel="Level1"
@@ -31,18 +53,18 @@
                     HorizontalOptions="Center" />
 
                 <!--<Label 
-                    Text="{}"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    x:Name="AddressSegwitLabel"
-                    HorizontalOptions="Center" />-->
+                     Text="{}"
+                     SemanticProperties.HeadingLevel="Level1"
+                     FontSize="18"
+                     x:Name="AddressSegwitLabel"
+                     HorizontalOptions="Center" />-->
 
                 <!--<Label 
-                    Text="Address P2PKH: "
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    x:Name="AddressP2PKHLabel"
-                    HorizontalOptions="Center" />-->
+                     Text="Address P2PKH: "
+                     SemanticProperties.HeadingLevel="Level1"
+                     FontSize="18"
+                     x:Name="AddressP2PKHLabel"
+                     HorizontalOptions="Center" />-->
 
                 <Label 
                     SemanticProperties.HeadingLevel="Level1"
@@ -59,11 +81,11 @@
                     HorizontalOptions="Center" />
 
                 <!--<Button 
-                    Text="Click me"
-                    FontAttributes="Bold"
-                    SemanticProperties.Hint="Counts the number of times you click"
-                    Clicked="OnCounterClicked"
-                    HorizontalOptions="Center" />-->
+                     Text="Click me"
+                     FontAttributes="Bold"
+                     SemanticProperties.Hint="Counts the number of times you click"
+                     Clicked="OnCounterClicked"
+                     HorizontalOptions="Center" />-->
 
                 <Image
                     Source="dotnet_bot.png"

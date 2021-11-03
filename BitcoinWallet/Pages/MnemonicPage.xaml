@@ -12,13 +12,76 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
-                    SemanticProperties.HeadingLevel="Level1"   
-                    FontSize="24"
-                    Padding="10"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+                   SemanticProperties.HeadingLevel="Level1"   
+                   FontSize="24"
+                   Padding="10"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
 
-            <v:MnemonicView />
+            <StackLayout>
+                <Label 
+                    x:Name="TestMnemonic"
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+                <Label  
+                    Text=""
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="18"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
