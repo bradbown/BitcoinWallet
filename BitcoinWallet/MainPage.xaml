@@ -26,41 +26,23 @@
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
                 <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
-                <Border 
-                    Padding="16,8"
-                    Stroke="#512bdf"
-                    Background="Silver"
-                    StrokeThickness="4"
-                    HorizontalOptions="Center">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="40,0,0,40"/>
-                    </Border.StrokeShape>
+                <StackLayout Margin="5" >
+                    <Label 
+                        Text="Add a wallet"
+                        FontSize="18" 
+                        Margin="2"/>
 
-                    <Border.Shadow>
-                        <Shadow Brush="#000000" 
-                                Offset="20,20"
-                                Radius="40"
-                                Opacity="0.8"/>
-                    </Border.Shadow>
+                    <Label
+                        Text="You can have as many as you like!"
+                        FontSize="12"  
+                        Margin="2"/>
 
-                    <StackLayout Margin="5" >
-                        <Label 
-                            Text="Add a wallet"
-                            FontSize="18" 
-                            Margin="2"/>
-
-                        <Label
-                            Text="You can have as many as you like!"
-                            FontSize="12"  
-                            Margin="2"/>
-
-                        <Button
-                            Command="{Binding GenerateWallet}"
-                            Text="Add Wallet"
-                            FontAttributes="Bold" 
-                            Margin="2"/>
-                    </StackLayout>
-                </Border>
+                    <Button
+                        Command="{Binding GenerateWallet}"
+                        Text="Add Wallet"
+                        FontAttributes="Bold" 
+                        Margin="2"/>
+                </StackLayout>
             </Grid>
 
             <StackLayout Grid.Row="2">

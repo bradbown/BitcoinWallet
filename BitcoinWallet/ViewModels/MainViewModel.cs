@@ -10,7 +10,7 @@ using System.ComponentModel;
 
 namespace BitcoinWallet.ViewModels
 {
-    internal class MainViewModel : INotifyPropertyChanged
+    internal class MainViewModel : ViewModelBase
     {
         public NBitcoin.Network network = NBitcoin.Network.Main;
         public Wallet wallet;
@@ -29,20 +29,11 @@ namespace BitcoinWallet.ViewModels
 
         Mnemonic mnemonicDisplay;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public Mnemonic MnemonicDisplay
         {
             get => keys != null ? mnemonicDisplay : null;
 
-            set
-            {
-                if (value == mnemonicDisplay)
-                    return;
-
-                mnemonicDisplay = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MnemonicDisplay"));
-            }
+            set => SetProperty(ref mnemonicDisplay, value);
         }
 
         public void OnGenerateWallet()
