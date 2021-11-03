@@ -30,12 +30,12 @@
                     Margin="2"/>
 
                 <Label 
-                    Text="{Binding MnemonicDisplay.Words[0]}"
+                    Text="{}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center" />
                 <Label 
-                    Text="{Binding MnemonicDisplay.Words[1]}"
+                    Text="{}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="32"
                     HorizontalOptions="Center" />

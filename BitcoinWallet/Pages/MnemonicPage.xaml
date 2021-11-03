@@ -4,9 +4,9 @@
     x:Class="BitcoinWallet.Pages.MnemonicPage"
     xmlns:v="clr-namespace:BitcoinWallet.Views"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
-    x:DataType="viewmodels:MainViewModel">
+    x:DataType="viewmodels:MnemonicViewModel">
     <ContentPage.BindingContext>
-        <viewmodels:MainViewModel/>
+        <viewmodels:MnemonicViewModel/>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
@@ -20,12 +20,12 @@
 
             <StackLayout>
                 <Label 
-                    x:Name="TestMnemonic"
-                    Text=""
+                    Text="{Binding MnemonicDisplay}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
                 <Label  
+                    x:Name="TestL"
                     Text=""
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"

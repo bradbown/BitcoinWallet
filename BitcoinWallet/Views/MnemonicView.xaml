@@ -11,7 +11,7 @@
     
     <ContentView.Content>
         <StackLayout>
-            <Label 
+            <!--<Label 
                 Text="{Binding MnemonicDisplay.Words[0]}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="18"
@@ -71,7 +71,7 @@
                 Text="{Binding MnemonicDisplay.Words[11]}"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="18"
-                HorizontalOptions="Center"/>        
+                HorizontalOptions="Center"/>  -->      
         </StackLayout>
     </ContentView.Content>
 </ContentView>
