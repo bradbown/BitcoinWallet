@@ -28,17 +28,6 @@
                     Text="Add Wallet"
                     FontAttributes="Bold" 
                     Margin="2"/>
-
-                <Label 
-                    Text="{}"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center" />
-                <Label 
-                    Text="{}"
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="32"
-                    HorizontalOptions="Center" />
             </StackLayout>
         </Grid>
     </ContentView.Content>

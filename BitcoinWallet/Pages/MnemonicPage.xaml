@@ -10,7 +10,7 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
                    SemanticProperties.HeadingLevel="Level1"   
                    FontSize="24"
@@ -20,68 +20,51 @@
 
             <StackLayout>
                 <Label 
-                    Text="{Binding MnemonicDisplay}"
+                    Text="{Binding MnemonicDisplay.Words[0]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
-                <Label  
-                    x:Name="TestL"
-                    Text=""
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[1]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[2]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[3]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[4]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
-                    SemanticProperties.HeadingLevel="Level1"
-                    FontSize="18"
-                    HorizontalOptions="Center"/>
-                <Label  
-                    Text=""
+                <Label 
+                    Text="{Binding MnemonicDisplay.Words[5]}"
                     SemanticProperties.HeadingLevel="Level1"
                     FontSize="18"
                     HorizontalOptions="Center"/>
             </StackLayout>
+
+            <GridLayout Padding="20 100">
+                <Button 
+                    Grid.Row="0"
+                    Text="Back"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start" 
+                    Command="{Binding OnBack}"/>
+                <Button 
+                    Grid.Row="0"
+                    Text="Next"
+                    FontAttributes="Bold"
+                    HorizontalOptions="End"
+                    Command="{Binding OnNext}"/>
+            </GridLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

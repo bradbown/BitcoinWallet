@@ -13,7 +13,6 @@ namespace BitcoinWallet.Pages
         {
             InitializeComponent();
             ((MnemonicViewModel)BindingContext).SetMnemonicDisplay(mnemonic);
-            this.TestL.Text = mnemonic.Words[0];
         }
 
         private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
