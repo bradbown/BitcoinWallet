@@ -38,9 +38,9 @@
                         Margin="2"/>
 
                     <Button
+                        Style="{StaticResource enabledButtonStyle}"
                         Command="{Binding GenerateWallet}"
                         Text="Add Wallet"
-                        FontAttributes="Bold" 
                         Margin="2"/>
                 </StackLayout>
             </Grid>

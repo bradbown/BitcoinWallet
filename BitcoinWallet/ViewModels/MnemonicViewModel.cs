@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui.Controls;
 using System.Windows.Input;
 using NBitcoin;
+using Microsoft.Maui.Graphics;
 
 namespace BitcoinWallet.ViewModels
 {
@@ -10,6 +11,7 @@ namespace BitcoinWallet.ViewModels
 
         Mnemonic mnemonicDisplay;
         bool backEnabled = false;
+        Color color;
 
         public MnemonicViewModel()
         {
@@ -40,7 +42,10 @@ namespace BitcoinWallet.ViewModels
             {
                 mnemonicPageCount--;
                 if (mnemonicPageCount == 0)
-                    BackEnabled = false;                
+                {
+                    BackEnabled = false;
+                    
+                }
             }
         }
 

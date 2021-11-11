@@ -9,16 +9,26 @@
 
             <Color x:Key="PrimaryColor">#512bdf</Color>
             <Color x:Key="SecondaryColor">White</Color>
+            <Color x:Key="DisabledColor">Grey</Color>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
 
-            <Style TargetType="Button">
+            <Style TargetType="Button" x:Key="enabledButtonStyle">
                 <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
+                <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="Padding" Value="14,10" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="disabledButtonStyle">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontFamily" Value="OpenSansRegular" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource DisabledColor}" />
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 

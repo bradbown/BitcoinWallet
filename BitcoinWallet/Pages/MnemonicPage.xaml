@@ -4,6 +4,7 @@
     x:Class="BitcoinWallet.Pages.MnemonicPage"
     xmlns:v="clr-namespace:BitcoinWallet.Views"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
+    BackgroundColor="{DynamicResource SecondaryColor}"
     x:DataType="viewmodels:MnemonicViewModel">
     <ContentPage.BindingContext>
         <viewmodels:MnemonicViewModel/>
@@ -55,14 +56,14 @@
                 <Button 
                     Grid.Row="0"
                     Text="Back"
-                    FontAttributes="Bold"
+                    Style="{StaticResource disabledButtonStyle}"
                     HorizontalOptions="Start" 
                     Command="{Binding OnBack}"
                     IsEnabled="{Binding BackEnabled}" />
                 <Button 
                     Grid.Row="0"
                     Text="Next"
-                    FontAttributes="Bold"
+                    Style="{DynamicResource enabledButtonStyle}"
                     HorizontalOptions="End"
                     Command="{Binding OnNext}"/>
             </GridLayout>
