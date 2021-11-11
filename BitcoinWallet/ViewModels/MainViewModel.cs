@@ -35,14 +35,14 @@ namespace BitcoinWallet.ViewModels
         //    set => SetProperty(ref mnemonicDisplay, value);
         //}
 
-        public async void OnGenerateWallet()
+        public void OnGenerateWallet()
         {
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
             keys = wallet.GenerateWallet("wallet", "password");
             //if(keys != null)
             //    MnemonicDisplay = keys.mnemonic;
 
-            await (App.Current.MainPage as NavigationPage).PushAsync(new Pages.MnemonicPage(keys.mnemonic));
+            App.Current.MainPage = new Pages.MnemonicPage(keys.mnemonic);
 
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             //ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
