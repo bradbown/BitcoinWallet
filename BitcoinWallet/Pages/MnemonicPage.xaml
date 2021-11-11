@@ -57,7 +57,8 @@
                     Text="Back"
                     FontAttributes="Bold"
                     HorizontalOptions="Start" 
-                    Command="{Binding OnBack}"/>
+                    Command="{Binding OnBack}"
+                    IsEnabled="{Binding BackEnabled}" />
                 <Button 
                     Grid.Row="0"
                     Text="Next"

@@ -6,7 +6,10 @@ namespace BitcoinWallet.ViewModels
 {
     internal class MnemonicViewModel : ViewModelBase
     {
+        int mnemonicPageCount = 0;
+
         Mnemonic mnemonicDisplay;
+        bool backEnabled = false;
 
         public MnemonicViewModel()
         {
@@ -20,21 +23,32 @@ namespace BitcoinWallet.ViewModels
             set => SetProperty(ref mnemonicDisplay, value); 
         }
 
+        public bool BackEnabled
+        {
+            get => backEnabled;
+            set => SetProperty(ref backEnabled, value);
+        }
         public void SetMnemonicDisplay(Mnemonic mnemonic)
         {
-            this.MnemonicDisplay = mnemonic;
+            MnemonicDisplay = mnemonic;
         }
 
         public ICommand OnBack { get; }
         public void Back()
         {
-
+            if(mnemonicPageCount > 0)
+            {
+                mnemonicPageCount--;
+                if (mnemonicPageCount == 0)
+                    BackEnabled = false;                
+            }
         }
 
         public ICommand OnNext { get; }
         public void Next()
         {
-
+            mnemonicPageCount++;
+            BackEnabled = true;
         }
     }
 }
