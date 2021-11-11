@@ -7,7 +7,7 @@ namespace BitcoinWallet.ViewModels
 {
     internal class MnemonicViewModel : ViewModelBase
     {
-        public Mnemonic mnemonicDisplay;
+        Mnemonic mnemonicDisplay;
 
         public MnemonicViewModel()
         {
@@ -18,6 +18,11 @@ namespace BitcoinWallet.ViewModels
         {
             get => mnemonicDisplay != null ? mnemonicDisplay : null;
             set => SetProperty(ref mnemonicDisplay, value); 
+        }
+
+        public void SetMnemonicDisplay(Mnemonic mnemonic)
+        {
+            this.mnemonicDisplay = mnemonic;
         }
     }
 }
