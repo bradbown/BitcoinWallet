@@ -9,7 +9,7 @@
 
             <Color x:Key="PrimaryColor">#512bdf</Color>
             <Color x:Key="SecondaryColor">White</Color>
-            <Color x:Key="DisabledColor">Grey</Color>
+            <Color x:Key="DisabledColor">LightGrey</Color>
 
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
@@ -25,10 +25,10 @@
             </Style>
 
             <Style TargetType="Button" x:Key="disabledButtonStyle">
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="DarkGrey" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource DisabledColor}" />
+                <Setter Property="BackgroundColor" Value="LightGrey" />
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 

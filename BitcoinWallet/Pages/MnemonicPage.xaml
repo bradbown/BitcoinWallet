@@ -9,7 +9,7 @@
     <ContentPage.BindingContext>
         <viewmodels:MnemonicViewModel/>
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
             <Label Text="Please write down your mnemonic in order and keep stored in a safe place!"
@@ -87,9 +87,18 @@
 
             <GridLayout Padding="20 100">
                 <Button 
+                    IsVisible="{Binding PageOne}"
                     Grid.Row="0"
                     Text="Back"
                     Style="{StaticResource disabledButtonStyle}"
+                    HorizontalOptions="Start" 
+                    Command="{Binding OnBack}"
+                    IsEnabled="{Binding BackEnabled}" />
+                <Button 
+                    IsVisible="{Binding PageTwo}"
+                    Grid.Row="0"
+                    Text="Back"
+                    Style="{StaticResource enabledButtonStyle}"
                     HorizontalOptions="Start" 
                     Command="{Binding OnBack}"
                     IsEnabled="{Binding BackEnabled}" />
