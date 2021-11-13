@@ -26,22 +26,22 @@
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
                 <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
-                <StackLayout Margin="5" >
+                <StackLayout Margin="5">
                     <Label 
                         Text="Add a wallet"
                         FontSize="18" 
-                        Margin="2"/>
+                        Margin="2" />
 
                     <Label
                         Text="You can have as many as you like!"
                         FontSize="12"  
-                        Margin="2"/>
+                        Margin="2" />
 
                     <Button
                         Style="{StaticResource enabledButtonStyle}"
                         Command="{Binding GenerateWallet}"
                         Text="Add Wallet"
-                        Margin="2"/>
+                        Margin="2" />
                 </StackLayout>
             </Grid>
 

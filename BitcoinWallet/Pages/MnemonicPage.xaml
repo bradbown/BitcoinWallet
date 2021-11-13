@@ -102,6 +102,7 @@
                     HorizontalOptions="Start" 
                     Command="{Binding OnBack}"
                     IsEnabled="{Binding BackEnabled}" />
+                
                 <Button 
                     Grid.Row="0"
                     Text="Next"
@@ -109,6 +110,11 @@
                     HorizontalOptions="End"
                     Command="{Binding OnNext}"/>
             </GridLayout>
+
+            <GridLayout IsVisible="{Binding MnemonicTestVisible}">
+                <Entry BackgroundColor="White" />
+            </GridLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
