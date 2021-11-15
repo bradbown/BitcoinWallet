@@ -85,6 +85,23 @@
                     HorizontalOptions="Center"/>
             </StackLayout>
 
+            <StackLayout IsVisible="{Binding MnemonicTestPage}" 
+                         Margin="20"
+                         Orientation="Horizontal">
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+                <Entry 
+                    HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
             <GridLayout Padding="20 100">
                 <Button 
                     IsVisible="{Binding PageOne}"
@@ -102,17 +119,13 @@
                     HorizontalOptions="Start" 
                     Command="{Binding OnBack}"
                     IsEnabled="{Binding BackEnabled}" />
-                
+
                 <Button 
                     Grid.Row="0"
                     Text="Next"
                     Style="{DynamicResource enabledButtonStyle}"
                     HorizontalOptions="End"
                     Command="{Binding OnNext}"/>
-            </GridLayout>
-
-            <GridLayout IsVisible="{Binding MnemonicTestVisible}">
-                <Entry BackgroundColor="White" />
             </GridLayout>
             
         </StackLayout>

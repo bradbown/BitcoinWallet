@@ -14,7 +14,7 @@ namespace BitcoinWallet.ViewModels
 
         bool pageOne = true;
         bool pageTwo = false;
-        bool mnemonicTestVisible = false;
+        bool mnemonicTestPage = false;
 
         public MnemonicViewModel()
         {
@@ -46,10 +46,10 @@ namespace BitcoinWallet.ViewModels
             set => SetProperty(ref pageTwo, value);
         }
 
-        public bool MnemonicTestVisible
+        public bool MnemonicTestPage
         {
-            get => mnemonicTestVisible;
-            set => SetProperty(ref mnemonicTestVisible, value);
+            get => mnemonicTestPage;
+            set => SetProperty(ref mnemonicTestPage, value);
         }
 
         public void SetMnemonicDisplay(Mnemonic mnemonic)
@@ -80,6 +80,7 @@ namespace BitcoinWallet.ViewModels
             mnemonicPage++;
             PageOne = (mnemonicPage == 0);
             PageTwo = (mnemonicPage == 1);
+            MnemonicTestPage = (mnemonicPage == 2);
             BackEnabled = true;
         }
     }

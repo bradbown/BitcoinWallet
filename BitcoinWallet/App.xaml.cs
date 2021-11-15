@@ -17,7 +17,9 @@ namespace BitcoinWallet
         {
             Window window = new Window(new MainPage());
             window.Title = "Dracula Wallet";
-            //window.
+            // Todo:
+            // set icon
+            // set toolbar background
             return window;
         }
     }
