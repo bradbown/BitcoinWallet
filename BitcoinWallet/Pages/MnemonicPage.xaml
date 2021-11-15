@@ -4,7 +4,7 @@
     x:Class="BitcoinWallet.Pages.MnemonicPage"
     xmlns:v="clr-namespace:BitcoinWallet.Views"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
-    BackgroundColor="{DynamicResource SecondaryColor}"
+    BackgroundColor="{DynamicResource Background}"
     x:DataType="viewmodels:MnemonicViewModel">
     <ContentPage.BindingContext>
         <viewmodels:MnemonicViewModel/>
@@ -98,10 +98,10 @@
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition Width="auto" />
                 </GridLayout.ColumnDefinitions>
-                <Entry Grid.Row="0" Grid.Column="0"/>
-                <Entry Grid.Row="0" Grid.Column="1"/>
-                <Entry Grid.Row="0" Grid.Column="2"/>
-                <Entry Grid.Row="0" Grid.Column="3"/>
+                <Entry Grid.Row="0" Grid.Column="0" Placeholder="Test" />
+                <Entry Grid.Row="0" Grid.Column="1" Placeholder="Test" />
+                <Entry Grid.Row="0" Grid.Column="2" Placeholder="Test" />
+                <Entry Grid.Row="0" Grid.Column="3" Placeholder="Test" />
             </GridLayout>
 
             <GridLayout Padding="20 100">

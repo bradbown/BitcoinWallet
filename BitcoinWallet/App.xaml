@@ -38,15 +38,15 @@
             <Color x:Key="Yellow">#f1fa8c</Color>
 
             <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource Pink}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
             </Style>
 
             <Style TargetType="Button" x:Key="enabledButtonStyle">
-                <Setter Property="TextColor" Value="{DynamicResource SecondaryColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource Background}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
                 <Setter Property="FontAttributes" Value="Bold" />
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource Green}" />
                 <Setter Property="Padding" Value="14,10" />
             </Style>
 
@@ -59,8 +59,9 @@
             </Style>
 
             <Style TargetType="Entry">
-                <Setter Property="BackgroundColor" Value="White" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="{DynamicResource CurrentLine}" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="{DynamicResource Comment}" />
                 <Setter Property="MinimumWidthRequest" Value="150" />
                 <Setter Property="MaximumWidthRequest" Value="150" />
                 <Setter Property="Margin" Value="20" />
