@@ -85,22 +85,24 @@
                     HorizontalOptions="Center"/>
             </StackLayout>
 
-            <StackLayout IsVisible="{Binding MnemonicTestPage}" 
+            <GridLayout IsVisible="{Binding MnemonicTestPage}" 
                          Margin="20"
-                         Orientation="Horizontal">
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-                <Entry 
-                    HorizontalOptions="CenterAndExpand"/>
-            </StackLayout>
+                         HorizontalOptions="CenterAndExpand">
+
+                <GridLayout.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </GridLayout.RowDefinitions>
+                <GridLayout.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </GridLayout.ColumnDefinitions>
+                <Entry Grid.Row="0" Grid.Column="0"/>
+                <Entry Grid.Row="0" Grid.Column="1"/>
+                <Entry Grid.Row="0" Grid.Column="2"/>
+                <Entry Grid.Row="0" Grid.Column="3"/>
+            </GridLayout>
 
             <GridLayout Padding="20 100">
                 <Button 
