@@ -10,9 +10,15 @@ namespace BitcoinWallet
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            
         }
-        //protected override Window CreateWindow(IActivationState activationState) =>
-        //    new Window(new NavigationPage(new MainPage())) { Title = "Bitcoin Wallet" };        
+        protected override Window CreateWindow(IActivationState activationState)
+        {
+            Window window = new Window(new MainPage());
+            window.Title = "Dracula Wallet";
+            //window.
+            return window;
+        }
     }
 }

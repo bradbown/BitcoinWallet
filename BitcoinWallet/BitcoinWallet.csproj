@@ -13,10 +13,10 @@
 		
 
 		<!-- Display name -->
-		<ApplicationTitle>BitcoinWallet</ApplicationTitle>
+		<ApplicationTitle>Dracula Wallet</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.BitcoinWallet</ApplicationId>
+		<ApplicationId>com.companyname.DraculaWallet</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationVersion>1</ApplicationVersion>
@@ -25,11 +25,14 @@
 		<!-- Required for C# Hot Reload -->
 		<UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Product>$(AssemblyName)</Product>
+		<PackageIcon>draculaicon.png</PackageIcon>
+		<ApplicationIcon>Resources\draculaicon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiImage Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" IsAppIcon="true" Color="#512BD4" />
+		<MauiImage Include="Resources\appicon.svg" ForegroundFile="Resources\draculaicon.svg" IsAppIcon="true" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
@@ -45,6 +48,10 @@
 	<!-- Required - WinUI does not yet have buildTransitive for everything -->
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.29-preview3" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Resources\draculaicon.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -64,6 +71,13 @@
 
 	<ItemGroup>
 	  <Folder Include="Models\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\draculaicon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">

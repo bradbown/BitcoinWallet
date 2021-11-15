@@ -5,7 +5,8 @@
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:Class="BitcoinWallet.MainPage"
     BackgroundColor="{DynamicResource SecondaryColor}"
-    x:DataType="viewmodels:MainViewModel" >
+    x:DataType="viewmodels:MainViewModel" 
+    Title="Dracula Wallet">
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>
