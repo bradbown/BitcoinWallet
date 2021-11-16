@@ -89,7 +89,7 @@
                      HorizontalOptions="Center" />-->
 
                 <Image
-                    Source="dotnet_bot.png"
+                    Source="dracula.png"
                     SemanticProperties.Description="Cute dot net bot waving hi to you!"
                     WidthRequest="250"
                     HeightRequest="310"

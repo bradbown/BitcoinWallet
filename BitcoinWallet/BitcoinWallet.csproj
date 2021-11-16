@@ -51,6 +51,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\dracula.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Content Include="Resources\draculaicon.ico" />
 	</ItemGroup>
 
