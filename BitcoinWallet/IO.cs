@@ -41,7 +41,13 @@ namespace BitcoinWallet
 
         public static KeyManager ReadFromFile(string filePath)
         {
-            return JsonConvert.DeserializeObject<KeyManager>(filePath);
+            string jsonFromFile;
+            using (var reader = new StreamReader(filePath))
+            {
+                jsonFromFile = reader.ReadToEnd();
+            }
+
+            return JsonConvert.DeserializeObject<KeyManager>(jsonFromFile);
         }
     }
 }

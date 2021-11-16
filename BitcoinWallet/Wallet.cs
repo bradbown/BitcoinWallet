@@ -22,29 +22,29 @@ namespace BitcoinWallet
         public KeyManager GenerateWallet(string walletName, string password)
         {
             string filePath = walletDirectory + walletName + ".json";
-            if (IO.DoesDirectoryExist(walletDirectory))
+            //if (IO.DoesDirectoryExist(walletDirectory))
+            //{
+            //    //Directory doesn't exist
+            //    Console.WriteLine("directory exists");
+            //}
+            if (IO.DoesFileExist(filePath))
             {
-                //Directory doesn't exist
-                Console.WriteLine("directory exists");
+                return IO.ReadFromFile(filePath);
             }
-            //if (IO.DoesFileExist(filePath))
-            //{
-            //    return IO.ReadFromFile(filePath);
-            //}
-            //else
-            //{
-            Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
-            ExtKey extKey = mnemonic.DeriveExtKey(password);
+            else
+            {
+                Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                ExtKey extKey = mnemonic.DeriveExtKey(password);
 
-            HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
-            ExtPubKey extPubKey = extKey.Neuter();
+                HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
+                ExtPubKey extPubKey = extKey.Neuter();
 
-            KeyManager keyManager = new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                KeyManager keyManager = new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
 
-            IO.WriteToFile(filePath, ref keyManager);
+                IO.WriteToFile(filePath, ref keyManager);
 
-            return keyManager;
-            //}
+                return keyManager;
+            }
         }
     }
 }

@@ -25,7 +25,6 @@
             <Grid 
                 Grid.Row="1"
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
-                <!--<Frame BorderColor="Black" BackgroundColor="LightGrey" HasShadow="True"/>-->
 
                 <StackLayout Margin="5">
                     <Label 
