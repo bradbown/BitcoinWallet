@@ -39,7 +39,7 @@ namespace BitcoinWallet
                 HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
                 ExtPubKey extPubKey = extKey.Neuter();
 
-                KeyManager keyManager = new KeyManager(mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey);
 
                 IO.WriteToFile(filePath, ref keyManager);
 

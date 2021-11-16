@@ -38,6 +38,10 @@ namespace BitcoinWallet.ViewModels
         public void OnGenerateWallet()
         {
             wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
+            
+            //To do
+            ///open entry modal on new wallet to importname
+            
             keys = wallet.GenerateWallet("wallet", "password");
             //if(keys != null)
             //    MnemonicDisplay = keys.mnemonic;

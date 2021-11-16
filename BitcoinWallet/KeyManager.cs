@@ -13,22 +13,26 @@ namespace BitcoinWallet
     [JsonObject(MemberSerialization.OptIn)]
     internal class KeyManager
     {
+        [JsonProperty(Order = 1)]
+        public string walletName;
+
         public Mnemonic mnemonic;
 
         public ExtKey extKey;
 
-        [JsonProperty(Order = 1)]
+        [JsonProperty(Order = 2)]
         [JsonConverter(typeof(HDFingerprintJsonConverter))]
         public HDFingerprint masterKeyFingerprint;
 
-        [JsonProperty(Order = 2)]
+        [JsonProperty(Order = 3)]
         [JsonConverter(typeof(ExtPubKeyJsonConverter))]
         public ExtPubKey extPubKey;
 
 
         [JsonConstructor]
-        public KeyManager(Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
+        public KeyManager(string walletName, Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
         {
+            this.walletName = walletName;
             this.mnemonic = mnemonic;
             this.extKey = extKey; 
             this.masterKeyFingerprint = masterKeyFingerprint;
