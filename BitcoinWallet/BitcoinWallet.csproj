@@ -68,6 +68,9 @@
 		<MauiXaml Update="Pages\MnemonicPage.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</MauiXaml>
+		<MauiXaml Update="Pages\CreateWalletPage.xaml">
+			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+		</MauiXaml>
 		<MauiXaml Update="Views\WalletSelector.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</MauiXaml>
