@@ -10,14 +10,12 @@ namespace BitcoinWallet.ViewModels
         NBitcoin.Network network = NBitcoin.Network.Main;
         Wallet wallet;
         KeyManager keys;
-        string walletDirectory;
 
         string walletName;
 
         public CreateWalletViewModel()
         {
             CreateWallet = new Command(OnCreateWallet);
-            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
         }
 
         public string WalletName 
@@ -29,7 +27,7 @@ namespace BitcoinWallet.ViewModels
         public ICommand CreateWallet { get; }
         public void OnCreateWallet()
         {
-            wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
+            wallet = new Wallet(NBitcoin.Network.Main);
             
             //To do
             //open entry modal on new wallet to importname

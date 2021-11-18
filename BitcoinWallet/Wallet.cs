@@ -1,7 +1,9 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using NBitcoin;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,13 @@ namespace BitcoinWallet
         public NBitcoin.Network network;
         public string walletDirectory;
 
+        public Wallet(NBitcoin.Network network)
+        {
+            this.network = network;
+            //this.walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
+            this.walletDirectory = "/data/com.companyname.DraculaWallet/files";//Microsoft.Maui.Essentials.FileSystem.AppDataDirectory;
+            //Maui.Essentials.FileSystem.AppDataDirectory
+        }
         public Wallet(NBitcoin.Network network, string walletDirectory)
         {
             this.network = network;
