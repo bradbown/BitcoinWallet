@@ -6,7 +6,8 @@
     x:Class="BitcoinWallet.MainPage"
     BackgroundColor="{DynamicResource Background}"
     x:DataType="viewmodels:MainViewModel" 
-    Title="Dracula Wallet">
+    Title="Dracula Wallet"
+    NavigationPage.HasNavigationBar="false">
     <ContentPage.BindingContext>
         <viewmodels:MainViewModel/>
     </ContentPage.BindingContext>

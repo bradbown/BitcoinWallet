@@ -11,11 +11,10 @@ namespace BitcoinWallet
         {
             InitializeComponent();
             //MainPage = new MainPage();
-            
         }
         protected override Window CreateWindow(IActivationState activationState)
         {
-            Window window = new Window(new MainPage());
+            Window window = new Window(new NavigationPage(new MainPage()));
             window.Title = "Dracula Wallet";
             // Todo:
             // set icon

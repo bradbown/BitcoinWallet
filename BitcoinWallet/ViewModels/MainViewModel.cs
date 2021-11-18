@@ -1,9 +1,6 @@
-﻿using Microsoft.Maui.Controls;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using NBitcoin;
 
@@ -46,7 +43,10 @@ namespace BitcoinWallet.ViewModels
             //if(keys != null)
             //    MnemonicDisplay = keys.mnemonic;
 
+            
+            //(App.Current.MainPage as NavigationPage).PushAsync(new Pages.MnemonicPage(keys.mnemonic));
             App.Current.MainPage = new Pages.MnemonicPage(keys.mnemonic);
+
 
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
             //ExtKeyLabel.Text = $"ExtKey: {keys.extKey}";
