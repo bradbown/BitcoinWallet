@@ -7,12 +7,12 @@ namespace BitcoinWallet.ViewModels
 {
     internal class CreateWalletViewModel : ViewModelBase
     {
-        public string walletName;
+        NBitcoin.Network network = NBitcoin.Network.Main;
+        Wallet wallet;
+        KeyManager keys;
+        string walletDirectory;
 
-        private NBitcoin.Network network = NBitcoin.Network.Main;
-        private Wallet wallet;
-        private KeyManager keys;
-        private string walletDirectory;
+        string walletName;
 
         public CreateWalletViewModel()
         {

@@ -27,7 +27,7 @@ namespace BitcoinWallet
             //    //Directory doesn't exist
             //    Console.WriteLine("directory exists");
             //}
-            if (!IO.DoesFileExist(filePath))
+            if (IO.DoesFileExist(filePath))
             {
                 return IO.ReadFromFile(filePath);
             }

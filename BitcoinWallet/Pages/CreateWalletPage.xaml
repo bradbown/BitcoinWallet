@@ -5,6 +5,9 @@
     BackgroundColor="{DynamicResource Background}"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:DataType="viewmodels:CreateWalletViewModel">
+    <ContentPage.BindingContext>
+        <viewmodels:CreateWalletViewModel/>
+    </ContentPage.BindingContext>
     
     <ContentPage.Content>
         <StackLayout  VerticalOptions="Start" Margin="20">
@@ -17,7 +20,7 @@
                 Placeholder="Wallet name"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" 
-                />
+                Text="{Binding WalletName, Mode=TwoWay}"/>
             <Label 
                 Text="Type"
                 HorizontalOptions="Start" 
