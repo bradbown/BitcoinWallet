@@ -5,9 +5,24 @@
     BackgroundColor="{DynamicResource Background}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label 
+                Text="Name"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start"/>
+            <Entry 
+                Placeholder="Wallet name"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start" />
+            <Label 
+                Text="Type"
+                HorizontalOptions="Start" 
+                VerticalOptions="Start"/>
+
+            <Button 
+                Style="{StaticResource enabledButtonStyle}"
+                Command="{Binding GenerateWallet}"
+                Text="Create"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
