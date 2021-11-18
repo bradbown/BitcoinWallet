@@ -2,26 +2,32 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="BitcoinWallet.Pages.CreateWalletPage" 
-    BackgroundColor="{DynamicResource Background}">
+    BackgroundColor="{DynamicResource Background}"
+    xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
+    x:DataType="viewmodels:CreateWalletViewModel">
+    
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout  VerticalOptions="Start" Margin="20">
+
             <Label 
                 Text="Name"
                 HorizontalOptions="Start" 
-                VerticalOptions="Start"/>
+                VerticalOptions="Start" />
             <Entry 
                 Placeholder="Wallet name"
                 HorizontalOptions="Start" 
-                VerticalOptions="Start" />
+                VerticalOptions="Start" 
+                />
             <Label 
                 Text="Type"
                 HorizontalOptions="Start" 
-                VerticalOptions="Start"/>
+                VerticalOptions="Start" />
 
             <Button 
                 Style="{StaticResource enabledButtonStyle}"
-                Command="{Binding GenerateWallet}"
-                Text="Create"/>
+                Command="{Binding CreateWallet}"
+                Text="Create"
+                HorizontalOptions="Start" />
 
         </StackLayout>
     </ContentPage.Content>

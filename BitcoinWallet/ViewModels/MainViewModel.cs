@@ -8,44 +8,16 @@ namespace BitcoinWallet.ViewModels
 {
     internal class MainViewModel : ViewModelBase
     {
-        public NBitcoin.Network network = NBitcoin.Network.Main;
-        public Wallet wallet;
-        public KeyManager keys;
-        public string walletDirectory;
-
-        //D:\Projects\Bitcoin\BitcoinWallet\BitcoinWallet\bin\Debug\net6.0-windows10.0.19041\win-x64\.exe
-
         public MainViewModel()
         {
             GenerateWallet = new Command(OnGenerateWallet);
-            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
         }
 
         public ICommand GenerateWallet { get; }
 
-        //Mnemonic mnemonicDisplay;
-        //
-        //public Mnemonic MnemonicDisplay
-        //{
-        //    get => keys != null ? mnemonicDisplay : null;
-        //
-        //    set => SetProperty(ref mnemonicDisplay, value);
-        //}
-
         public void OnGenerateWallet()
         {
-            wallet = new Wallet(NBitcoin.Network.Main, walletDirectory);
-            
-            //To do
-            ///open entry modal on new wallet to importname
-            
-            keys = wallet.GenerateWallet("wallet", "password");
-            //if(keys != null)
-            //    MnemonicDisplay = keys.mnemonic;
-
-            
-            //(App.Current.MainPage as NavigationPage).PushAsync(new Pages.MnemonicPage(keys.mnemonic));
-            App.Current.MainPage = new Pages.MnemonicPage(keys.mnemonic);
+            App.Current.MainPage = new Pages.CreateWalletPage();
 
 
             //MnemonicLabel.Text = $"Mnemonic: {keys.mnemonic}";
