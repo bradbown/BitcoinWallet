@@ -18,9 +18,11 @@ namespace BitcoinWallet
         public Wallet(NBitcoin.Network network)
         {
             this.network = network;
-            //this.walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
-            this.walletDirectory = "/data/com.companyname.DraculaWallet/files";//Microsoft.Maui.Essentials.FileSystem.AppDataDirectory;
-            //Maui.Essentials.FileSystem.AppDataDirectory
+#if __ANDROID__
+            walletDirectory = "Microsoft.Maui.Essentials.FileSystem.AppDataDirectory";
+#else
+            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
+#endif
         }
         public Wallet(NBitcoin.Network network, string walletDirectory)
         {
