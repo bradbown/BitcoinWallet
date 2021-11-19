@@ -32,7 +32,7 @@ namespace BitcoinWallet
 
         public KeyManager GenerateWallet(string walletName, string password)
         {
-            string filePath = walletDirectory + walletName + ".json";
+            string filePath = walletDirectory + "wallet" + ".json";
             //if (IO.DoesDirectoryExist(walletDirectory))
             //{
             //    //Directory doesn't exist
