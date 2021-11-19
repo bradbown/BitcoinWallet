@@ -1,5 +1,17 @@
-﻿{
-  "walletName": "wallet",
-  "masterKeyFingerprint": "e1d2e7c3",
-  "extPubKey": "xpub661MyMwAqRbcFmQfGhTBexHeG3e2F88PGqX3yv4WQfiWBWpZXGNzE6y7GTi18F4aok2Ft8zsygYH1bptKKdoZeHNgyPthS1nB6dBojQaRas"
-}
+﻿[
+  {
+    "walletName": "wallet",
+    "masterKeyFingerprint": "e1d2e7c3",
+    "extPubKey": "xpub661MyMwAqRbcFmQfGhTBexHeG3e2F88PGqX3yv4WQfiWBWpZXGNzE6y7GTi18F4aok2Ft8zsygYH1bptKKdoZeHNgyPthS1nB6dBojQaRas"
+  },
+  {
+    "walletName": "wallet",
+    "masterKeyFingerprint": "254cda35",
+    "extPubKey": "xpub661MyMwAqRbcFGnYXL2HSEGdNgwrpxwSXLP2t8KDWUYNxPAocD7PN42mXKBXRir4ykrQ7iu1TYAtzfjN2pwcBRkprd2vLgVwzGGUsvHs64N"
+  },
+  {
+    "walletName": "wallet",
+    "masterKeyFingerprint": "d731d3c3",
+    "extPubKey": "xpub661MyMwAqRbcFe5EZnjyNba7Kytx6tdTFKc5Tb7QjZB3grL7XEic3tRjftcaFawVBYPYXVExF1gaCsFXhjAkVFgRSc58XSwryWx55TwDmft"
+  }
+]

@@ -40,7 +40,25 @@ namespace BitcoinWallet
             //}
             if (IO.DoesFileExist(filePath))
             {
-                return IO.ReadFromFile(filePath);
+                //Todo append to json
+                List<KeyManager> walletList = new List<KeyManager>();
+                var jsonData = IO.ReadListFromFile(filePath);
+
+                foreach (var key in jsonData)
+                    walletList.Add(key);
+
+                Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
+                ExtKey extKey = mnemonic.DeriveExtKey(password);
+
+                HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
+                ExtPubKey extPubKey = extKey.Neuter();
+
+                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey);
+
+                walletList.Add(keyManager);
+                IO.WriteToFile(filePath, ref walletList);
+
+                return keyManager;
             }
             else
             {

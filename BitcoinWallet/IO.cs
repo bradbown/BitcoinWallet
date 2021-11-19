@@ -29,6 +29,8 @@ namespace BitcoinWallet
             }         
         }
 
+        
+
         public static bool DoesFileExist(string filePath)
         {
             return File.Exists(filePath);
@@ -48,6 +50,17 @@ namespace BitcoinWallet
             }
 
             return JsonConvert.DeserializeObject<KeyManager>(jsonFromFile);
+        }
+
+        public static List<KeyManager> ReadListFromFile(string filePath)
+        {
+            string jsonFromFile;
+            using (var reader = new StreamReader(filePath))
+            {
+                jsonFromFile = reader.ReadToEnd();
+            }
+
+            return JsonConvert.DeserializeObject<List<KeyManager>>(jsonFromFile);
         }
     }
 }
