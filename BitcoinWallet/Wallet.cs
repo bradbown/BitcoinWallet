@@ -14,10 +14,13 @@ namespace BitcoinWallet
     {
         public NBitcoin.Network network;
         public string walletDirectory;
+        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
 
         public Wallet(NBitcoin.Network network)
         {
             this.network = network;
+            filePath = walletDirectory + "wallet" + ".json";
+
 #if __ANDROID__
             walletDirectory = "Microsoft.Maui.Essentials.FileSystem.AppDataDirectory";
 #else
@@ -32,7 +35,7 @@ namespace BitcoinWallet
 
         public KeyManager GenerateWallet(string walletName, string password)
         {
-            string filePath = walletDirectory + "wallet" + ".json";
+            
             //if (IO.DoesDirectoryExist(walletDirectory))
             //{
             //    //Directory doesn't exist
@@ -41,11 +44,7 @@ namespace BitcoinWallet
             if (IO.DoesFileExist(filePath))
             {
                 //Todo append to json
-                List<KeyManager> walletList = new List<KeyManager>();
-                var jsonData = IO.ReadListFromFile(filePath);
-
-                foreach (var key in jsonData)
-                    walletList.Add(key);
+                List<KeyManager> walletList = LoadWallets();
 
                 Mnemonic mnemonic = new Mnemonic(Wordlist.English, WordCount.Twelve);
                 ExtKey extKey = mnemonic.DeriveExtKey(password);
@@ -74,6 +73,17 @@ namespace BitcoinWallet
 
                 return keyManager;
             }
+        }
+
+        public static List<KeyManager> LoadWallets()
+        {
+            List<KeyManager> walletList = new List<KeyManager>();
+            var jsonData = IO.ReadListFromFile(filePath);
+
+            foreach (var key in jsonData)
+                walletList.Add(key);
+
+            return walletList;
         }
     }
 }

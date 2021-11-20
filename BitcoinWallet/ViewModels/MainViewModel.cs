@@ -3,14 +3,24 @@ using Microsoft.Maui.Controls;
 using System;
 using System.Windows.Input;
 using NBitcoin;
+using System.Collections.Generic;
 
 namespace BitcoinWallet.ViewModels
 {
     internal class MainViewModel : ViewModelBase
     {
+        public List<KeyManager> wallets;
+
         public MainViewModel()
         {
             GenerateWallet = new Command(OnGenerateWallet);
+            Wallets = Wallet.LoadWallets();
+        }
+
+        public List<KeyManager> Wallets
+        {
+            get => wallets;
+            set => SetProperty(ref wallets, value);
         }
 
         public ICommand GenerateWallet { get; }

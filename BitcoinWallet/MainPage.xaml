@@ -23,6 +23,9 @@
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
 
+            <ListView 
+                ItemsSource="{Binding Wallets}" />
+
             <Grid 
                 Grid.Row="1"
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
