@@ -5,7 +5,7 @@
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
     x:Class="BitcoinWallet.MainPage"
     BackgroundColor="{DynamicResource Background}"
-    x:DataType="viewmodels:MainViewModel" 
+    x:DataType="viewmodels:MainViewModel"
     Title="Dracula Wallet"
     NavigationPage.HasNavigationBar="false">
     <ContentPage.BindingContext>
@@ -24,10 +24,18 @@
                 VerticalOptions="Start" />
 
             <ListView 
-                ItemsSource="{Binding Wallets}" />
+                Grid.Row="1"
+                ItemsSource="{Binding Wallets}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell 
+                            Text="{Binding .}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
             <Grid 
-                Grid.Row="1"
+                Grid.Row="2"
                 VerticalOptions="Start" ColumnDefinitions="Auto,Auto,Auto,Auto,*">
 
                 <StackLayout Margin="5">
@@ -49,7 +57,7 @@
                 </StackLayout>
             </Grid>
 
-            <StackLayout Grid.Row="2">
+            <StackLayout Grid.Row="3">
                 <Label 
                     Text=""
                     SemanticProperties.HeadingLevel="Level1"
