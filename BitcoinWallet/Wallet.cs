@@ -21,7 +21,7 @@ namespace BitcoinWallet
         public Wallet(NBitcoin.Network network)
         {
             this.network = network;
-            filePath = walletDirectory + "wallet" + ".json";
+            //filePath = walletDirectory + "wallet" + ".json";
 
 #if __ANDROID__
             walletDirectory = "Microsoft.Maui.Essentials.FileSystem.AppDataDirectory";

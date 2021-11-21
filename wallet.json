@@ -13,5 +13,10 @@
     "walletName": "wallet2",
     "masterKeyFingerprint": "d731d3c3",
     "extPubKey": "xpub661MyMwAqRbcFe5EZnjyNba7Kytx6tdTFKc5Tb7QjZB3grL7XEic3tRjftcaFawVBYPYXVExF1gaCsFXhjAkVFgRSc58XSwryWx55TwDmft"
+  },
+  {
+    "walletName": "New Wallet",
+    "masterKeyFingerprint": "048e3dc6",
+    "extPubKey": "xpub661MyMwAqRbcGFKVVkXQBWELVNnzBs8t1b4NopV5mAignJBN2mRSGvAyt3Hj46L9nztE8NmcjAPEJ4kD7zYHBTBdEuE9tsY4PH9dDuk678E"
   }
 ]
