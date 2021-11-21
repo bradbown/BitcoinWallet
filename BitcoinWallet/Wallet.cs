@@ -1,5 +1,7 @@
-﻿using Microsoft.Maui;
+﻿using BitcoinWallet.Models;
+using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using MvvmHelpers;
 using NBitcoin;
 using System;
 using System.Collections.Generic;
@@ -78,6 +80,17 @@ namespace BitcoinWallet
         public static List<KeyManager> LoadWallets()
         {
             List<KeyManager> walletList = new List<KeyManager>();
+            var jsonData = IO.ReadListFromFile(filePath);
+
+            foreach (var key in jsonData)
+                walletList.Add(key);
+
+            return walletList;
+        }
+
+        public static ObservableRangeCollection<KeyManager> LoadWalletsObservable()
+        {
+            ObservableRangeCollection<KeyManager> walletList = new ObservableRangeCollection<KeyManager>();
             var jsonData = IO.ReadListFromFile(filePath);
 
             foreach (var key in jsonData)

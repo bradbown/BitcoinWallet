@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:v="clr-namespace:BitcoinWallet.Views"
     xmlns:viewmodels="clr-namespace:BitcoinWallet.ViewModels"
+    xmlns:model="clr-namespace:BitcoinWallet.Models"
     x:Class="BitcoinWallet.MainPage"
     BackgroundColor="{DynamicResource Background}"
     x:DataType="viewmodels:MainViewModel"
@@ -27,9 +28,9 @@
                 Grid.Row="1"
                 ItemsSource="{Binding Wallets}">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="model:KeyManager">
                         <TextCell 
-                            Text="{Binding .}"/>
+                            Text="{Binding walletName}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

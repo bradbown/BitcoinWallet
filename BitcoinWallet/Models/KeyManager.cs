@@ -8,13 +8,13 @@ using Newtonsoft.Json;
 using NBitcoin;
 using BitcoinWallet.JsonConverters;
 
-namespace BitcoinWallet
+namespace BitcoinWallet.Models
 {
     [JsonObject(MemberSerialization.OptIn)]
     internal class KeyManager
     {
         [JsonProperty(Order = 1)]
-        public string walletName;
+        public string walletName { get; set; }
 
         public Mnemonic mnemonic;
 
@@ -34,7 +34,7 @@ namespace BitcoinWallet
         {
             this.walletName = walletName;
             this.mnemonic = mnemonic;
-            this.extKey = extKey; 
+            this.extKey = extKey;
             this.masterKeyFingerprint = masterKeyFingerprint;
             this.extPubKey = extPubKey;
         }

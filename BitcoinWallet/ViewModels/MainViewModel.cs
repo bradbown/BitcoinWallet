@@ -4,23 +4,19 @@ using System;
 using System.Windows.Input;
 using NBitcoin;
 using System.Collections.Generic;
+using MvvmHelpers;
+using BitcoinWallet.Models;
 
 namespace BitcoinWallet.ViewModels
 {
     internal class MainViewModel : ViewModelBase
     {
-        public List<KeyManager> wallets;
+        public ObservableRangeCollection<KeyManager> Wallets { get; set; }
 
         public MainViewModel()
         {
             GenerateWallet = new Command(OnGenerateWallet);
-            Wallets = Wallet.LoadWallets();
-        }
-
-        public List<KeyManager> Wallets
-        {
-            get => wallets;
-            set => SetProperty(ref wallets, value);
+            Wallets = Wallet.LoadWalletsObservable();
         }
 
         public ICommand GenerateWallet { get; }

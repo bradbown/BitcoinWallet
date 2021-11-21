@@ -1,4 +1,5 @@
-﻿using Microsoft.Maui;
+﻿using BitcoinWallet.Models;
+using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using System;
 using System.Windows.Input;
