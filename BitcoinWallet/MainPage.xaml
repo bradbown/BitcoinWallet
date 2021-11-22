@@ -27,10 +27,22 @@
             <ListView 
                 Grid.Row="1"
                 ItemsSource="{Binding Wallets}">
-                <ListView.ItemTemplate>
+                <ListView.ItemTemplate>            
                     <DataTemplate x:DataType="model:KeyManager">
-                        <TextCell 
-                            Text="{Binding walletName}"/>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Frame>
+                                    <StackLayout>
+                                        <Label 
+                                            FontSize="30"
+                                            Text="{Binding walletName}"/>
+                                        <Label 
+                                            FontSize="18"
+                                            Text="Balance: 0"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
