@@ -27,23 +27,28 @@
             <CollectionView 
                 Grid.Row="1"
                 ItemsSource="{Binding Wallets}"
-                BackgroundColor="{DynamicResource Purple}"
+                SelectionMode="Single"
+                BackgroundColor="Transparent"
                 ItemSizingStrategy="MeasureAllItems"
-                ItemsLayout="VerticalList">
+                ItemsLayout="HorizontalList">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:KeyManager">
-                        <Grid Padding="10">
-                            <StackLayout>
-                                <Label 
-                                    FontSize="30"
-                                    Text="{Binding walletName}"
-                                    TextColor="White"/>
-                                <Label 
-                                    FontSize="18"
-                                    Text="Balance: 0"
-                                    TextColor="White"/>
-                            </StackLayout>
+                        <ScrollView HorizontalOptions="Start" Margin="20">
+                        <Grid Padding="10" WidthRequest="300">
+                            <Frame CornerRadius="20" BackgroundColor="{DynamicResource Purple}" HasShadow="True">
+                                <StackLayout>
+                                    <Label 
+                                        FontSize="30"
+                                        Text="{Binding walletName}"
+                                        TextColor="White"/>
+                                    <Label 
+                                        FontSize="18"
+                                        Text="Balance: 0"
+                                        TextColor="White"/>
+                                </StackLayout>
+                            </Frame>
                         </Grid>
+                        </ScrollView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
