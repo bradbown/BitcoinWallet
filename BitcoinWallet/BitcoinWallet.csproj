@@ -26,14 +26,13 @@
 		<UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Product>$(AssemblyName)</Product>
-		<PackageIcon>draculaicon.png</PackageIcon>
+		<PackageIcon>dracula.png</PackageIcon>
 		<ApplicationIcon>Resources\draculaicon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiImage Include="Resources\appicon.svg" ForegroundFile="Resources\draculaicon.svg" IsAppIcon="true" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\draculaicon.svg" Color="#512BD4" />
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" />
 
@@ -48,10 +47,6 @@
 	<!-- Required - WinUI does not yet have buildTransitive for everything -->
 		<PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" />
 		<PackageReference Include="Microsoft.Graphics.Win2D" Version="1.0.0.29-preview3" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\Images\dracula.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -74,6 +69,13 @@
 		<MauiXaml Update="Views\WalletSelector.xaml">
 			<Generator>MSBuild:UpdateDesignTimeXaml</Generator>
 		</MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\Images\dracula.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 	<PropertyGroup Condition="$(TargetFramework.Contains('-windows'))">
