@@ -16,15 +16,41 @@
                 Text="Name"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
+            
             <Entry 
                 Placeholder="Wallet name"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" 
                 Text="{Binding WalletName, Mode=TwoWay}"/>
+            
             <Label 
                 Text="Type"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
+
+            <Grid Margin="10 10 10 0">                
+                <AbsoluteLayout>
+                    <Button 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Bitcoin"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="{DynamicResource Yellow}"
+                        BackgroundColor="{DynamicResource CurrentLine}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="200"
+                        HeightRequest="60"/>
+                    <Image 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="btclogo.png"
+                        WidthRequest="50"
+                        HeightRequest="50" 
+                        Margin="5"/>
+                </AbsoluteLayout>
+            </Grid>
 
             <Button 
                 Style="{StaticResource enabledButtonStyle}"
