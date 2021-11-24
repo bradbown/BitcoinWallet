@@ -16,7 +16,7 @@ namespace BitcoinWallet.ViewModels
         public MainViewModel()
         {
             GenerateWallet = new Command(OnGenerateWallet);
-            Wallets = Wallet.LoadWalletsObservable();
+            //Wallets = Wallet.LoadWalletsObservable();
         }
 
         public ICommand GenerateWallet { get; }

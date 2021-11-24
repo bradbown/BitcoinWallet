@@ -48,7 +48,7 @@
                         Source="btclogo.png"
                         WidthRequest="50"
                         HeightRequest="50" 
-                        Margin="5"/>
+                        Margin="5"/>                    
                 </AbsoluteLayout>
             </Grid>
 
