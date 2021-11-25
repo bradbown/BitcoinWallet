@@ -52,6 +52,31 @@
                 </AbsoluteLayout>
             </Grid>
 
+            <Grid Margin="10 10 10 0">
+                <AbsoluteLayout>
+                    <Button 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Padding="0 0 0 40"
+                        Text="Test Bitcoin"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#FFA4A4A4"
+                        BackgroundColor="{DynamicResource CurrentLine}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        WidthRequest="200"
+                        HeightRequest="60"/>
+                    <Image 
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Source="btclogoGrey.png"
+                        WidthRequest="50"
+                        HeightRequest="50" 
+                        Margin="5"/>
+                </AbsoluteLayout>
+            </Grid>
+
             <Button 
                 Style="{StaticResource enabledButtonStyle}"
                 Command="{Binding CreateWallet}"
