@@ -8,7 +8,7 @@ namespace BitcoinWallet.ViewModels
 {
     internal class CreateWalletViewModel : ViewModelBase
     {
-        NBitcoin.Network network = NBitcoin.Network.Main;
+        NBitcoin.Network network;
         Wallet wallet;
         KeyManager keys;
 
@@ -17,6 +17,7 @@ namespace BitcoinWallet.ViewModels
         public CreateWalletViewModel()
         {
             CreateWallet = new Command(OnCreateWallet);
+            BitcoinWalletSelect = new Command(OnBitcoinWalletSelect);
         }
 
         public string WalletName 
@@ -28,7 +29,7 @@ namespace BitcoinWallet.ViewModels
         public ICommand CreateWallet { get; }
         public void OnCreateWallet()
         {
-            wallet = new Wallet(NBitcoin.Network.Main);
+            wallet = new Wallet(network);
             
             //To do
             //open entry modal on new wallet to importname
@@ -36,6 +37,13 @@ namespace BitcoinWallet.ViewModels
             
             //(App.Current.MainPage as NavigationPage).PushAsync(new Pages.MnemonicPage(keys.mnemonic));
             App.Current.MainPage = new Pages.MnemonicPage(keys.mnemonic);
+        }
+
+        public ICommand BitcoinWalletSelect { get; }
+
+        public void OnBitcoinWalletSelect()
+        {
+            network = NBitcoin.Network.Main;
         }
     }
 }
