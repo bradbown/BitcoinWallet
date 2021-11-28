@@ -16,7 +16,7 @@ namespace BitcoinWallet
     {
         public NBitcoin.Network network;
         public string walletDirectory;
-        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
+        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\walletNet.json";
 
         public Wallet(NBitcoin.Network network)
         {
@@ -35,7 +35,7 @@ namespace BitcoinWallet
             this.walletDirectory = walletDirectory;
         }
 
-        public KeyManager GenerateWallet(string walletName, string password)
+        public KeyManager GenerateWallet(string walletName, string password, string network)
         {
             
             //if (IO.DoesDirectoryExist(walletDirectory))
@@ -54,7 +54,7 @@ namespace BitcoinWallet
                 HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
                 ExtPubKey extPubKey = extKey.Neuter();
 
-                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey, network);
 
                 walletList.Add(keyManager);
                 IO.WriteToFile(filePath, ref walletList);
@@ -69,7 +69,7 @@ namespace BitcoinWallet
                 HDFingerprint masterKeyFingerprint = extKey.Neuter().PubKey.GetHDFingerPrint();
                 ExtPubKey extPubKey = extKey.Neuter();
 
-                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey);
+                KeyManager keyManager = new KeyManager(walletName, mnemonic, extKey, masterKeyFingerprint, extPubKey, network);
 
                 IO.WriteToFile(filePath, ref keyManager);
 

@@ -28,15 +28,32 @@ namespace BitcoinWallet.Models
         [JsonConverter(typeof(ExtPubKeyJsonConverter))]
         public ExtPubKey extPubKey;
 
+        [JsonProperty(Order = 4)]
+        public string networkType;
+
+        public NBitcoin.Network network;
+
 
         [JsonConstructor]
-        public KeyManager(string walletName, Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey)
+        public KeyManager(string walletName, Mnemonic mnemonic, ExtKey extKey, HDFingerprint masterKeyFingerprint, ExtPubKey extPubKey, string network)
         {
             this.walletName = walletName;
             this.mnemonic = mnemonic;
             this.extKey = extKey;
             this.masterKeyFingerprint = masterKeyFingerprint;
             this.extPubKey = extPubKey;
+            this.networkType = network;
+
+            switch(network)
+            {
+                case "MainNet":
+                    this.network = Network.Main;
+                    break;
+
+                case "TestNet":
+                    this.network = Network.TestNet;
+                    break;
+            }                
         }
     }
 }
