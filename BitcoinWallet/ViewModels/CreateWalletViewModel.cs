@@ -18,6 +18,7 @@ namespace BitcoinWallet.ViewModels
         {
             CreateWallet = new Command(OnCreateWallet);
             BitcoinWalletSelect = new Command(OnBitcoinWalletSelect);
+            TestBitcoinWalletSelect = new Command(OnTestBitcoinWalletSelect);
         }
 
         public string WalletName 
@@ -44,6 +45,13 @@ namespace BitcoinWallet.ViewModels
         public void OnBitcoinWalletSelect()
         {
             network = NBitcoin.Network.Main;
+        }
+
+        public ICommand TestBitcoinWalletSelect { get; }
+
+        public void OnTestBitcoinWalletSelect()
+        {
+            network = NBitcoin.Network.TestNet;
         }
     }
 }
