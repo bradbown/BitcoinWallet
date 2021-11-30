@@ -15,29 +15,23 @@ namespace BitcoinWallet
     internal class Wallet
     {
         public NBitcoin.Network network;
-        public string walletDirectory;
-        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
+        static readonly string filePathWindows = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
+        static readonly string filePathAndroid = Microsoft.Maui.Essentials.FileSystem.AppDataDirectory + "\\wallet.json";
 
         public Wallet(NBitcoin.Network network)
         {
             this.network = network;
-            //filePath = walletDirectory + "wallet" + ".json";
-
-#if __ANDROID__
-            walletDirectory = "Microsoft.Maui.Essentials.FileSystem.AppDataDirectory";
-#else
-            walletDirectory = "D:\\Projects\\Bitcoin\\BitcoinWallet\\";
-#endif
-        }
-        public Wallet(NBitcoin.Network network, string walletDirectory)
-        {
-            this.network = network;
-            this.walletDirectory = walletDirectory;
         }
 
         public KeyManager GenerateWallet(string walletName, string password, string network)
         {
-            
+            string filePath;
+
+#if __ANDROID__
+            filePath = filePathAndroid;
+#else
+            filePath = filePathWindows;
+#endif
             //if (IO.DoesDirectoryExist(walletDirectory))
             //{
             //    //Directory doesn't exist
@@ -79,6 +73,14 @@ namespace BitcoinWallet
 
         public static List<KeyManager> LoadWallets()
         {
+            string filePath;
+
+#if __ANDROID__
+            filePath = filePathAndroid;
+#else
+            filePath = filePathWindows;
+#endif
+
             List<KeyManager> walletList = new List<KeyManager>();
             var jsonData = IO.ReadListFromFile(filePath);
 
@@ -90,6 +92,14 @@ namespace BitcoinWallet
 
         public static ObservableRangeCollection<KeyManager> LoadWalletsObservable()
         {
+            string filePath;
+
+#if __ANDROID__
+            filePath = filePathAndroid;
+#else
+            filePath = filePathWindows;
+#endif
+
             ObservableRangeCollection<KeyManager> walletList = new ObservableRangeCollection<KeyManager>();
             var jsonData = IO.ReadListFromFile(filePath);
 
