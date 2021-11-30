@@ -54,7 +54,7 @@ namespace BitcoinWallet.Models
 
                 case "TestNet":
                     network = NBitcoin.Network.TestNet;
-                    networkTypeImage = "btclogoGrey.png";
+                    networkTypeImage = "btclogogrey.png";
                     break;
             }                
         }

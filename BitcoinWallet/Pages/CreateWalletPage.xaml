@@ -72,7 +72,7 @@
                     <Image 
                         Grid.Row="0"
                         Grid.Column="0"
-                        Source="btclogoGrey.png"
+                        Source="btclogogrey.png"
                         WidthRequest="50"
                         HeightRequest="50" 
                         Margin="5"/>

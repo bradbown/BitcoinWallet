@@ -50,10 +50,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\btclogoGrey.png" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <Content Include="Resources\draculaicon.ico" />
 	</ItemGroup>
 
@@ -84,7 +80,7 @@
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
-		<None Update="Resources\Images\btclogoGrey.png">
+		<None Update="Resources\Images\btclogogrey.png">
 			<Pack>True</Pack>
 			<PackagePath>\</PackagePath>
 		</None>
