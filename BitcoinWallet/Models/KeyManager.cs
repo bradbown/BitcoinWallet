@@ -31,6 +31,8 @@ namespace BitcoinWallet.Models
         [JsonProperty(Order = 4)]
         public string networkType;
 
+        public NBitcoin.Network network;
+        public string networkTypeImage { get; set; }
 
 
         [JsonConstructor]
@@ -41,7 +43,20 @@ namespace BitcoinWallet.Models
             this.extKey = extKey;
             this.masterKeyFingerprint = masterKeyFingerprint;
             this.extPubKey = extPubKey;
-            this.networkType = networkType;               
+            this.networkType = networkType;
+
+            switch(networkType)
+            {
+                case "MainNet":
+                    network = Network.Main;
+                    networkTypeImage = "btclogo.png";
+                    break;
+
+                case "TestNet":
+                    network = Network.TestNet;
+                    networkTypeImage = "btclogoGrey.png";
+                    break;
+            }                
         }
     }
 }
