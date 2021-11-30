@@ -16,7 +16,7 @@ namespace BitcoinWallet
     {
         public NBitcoin.Network network;
         static readonly string filePathWindows = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
-        static readonly string filePathAndroid = Microsoft.Maui.Essentials.FileSystem.AppDataDirectory;
+        static readonly string filePathAndroid = Microsoft.Maui.Essentials.FileSystem.AppDataDirectory + "/wallet.json";
 
         public Wallet(NBitcoin.Network network)
         {
@@ -25,12 +25,10 @@ namespace BitcoinWallet
 
         public KeyManager GenerateWallet(string walletName, string password, string network)
         {
-            string filePath;
+            string filePath = filePathWindows;
 
 #if __ANDROID__
-            filePath = filePathAndroid + "/wallet.json";
-#else
-            filePath = filePathWindows;
+            filePath = filePathAndroid;
 #endif
             //if (IO.DoesDirectoryExist(walletDirectory))
             //{
@@ -73,12 +71,10 @@ namespace BitcoinWallet
 
         public static List<KeyManager> LoadWallets()
         {
-            string filePath;
+            string filePath = filePathWindows;
 
 #if __ANDROID__
-            filePath = filePathAndroid + "/wallet.json";
-#else
-            filePath = filePathWindows;
+            filePath = filePathAndroid;
 #endif
 
             List<KeyManager> walletList = new List<KeyManager>();
@@ -92,12 +88,10 @@ namespace BitcoinWallet
 
         public static ObservableRangeCollection<KeyManager> LoadWalletsObservable()
         {
-            string filePath;
+            string filePath = filePathWindows;
 
 #if __ANDROID__
-            filePath = filePathAndroid + "/wallet.json";
-#else
-            filePath = filePathWindows;
+            filePath = filePathAndroid;
 #endif
 
             ObservableRangeCollection<KeyManager> walletList = new ObservableRangeCollection<KeyManager>();
