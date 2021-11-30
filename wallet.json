@@ -22,5 +22,11 @@
     "masterKeyFingerprint": "048e3dc6",
     "extPubKey": "xpub661MyMwAqRbcGFKVVkXQBWELVNnzBs8t1b4NopV5mAignJBN2mRSGvAyt3Hj46L9nztE8NmcjAPEJ4kD7zYHBTBdEuE9tsY4PH9dDuk678E",
     "networkType": "MainNet"
+  },
+  {
+    "walletName": "T3st",
+    "masterKeyFingerprint": "d3ee81ea",
+    "extPubKey": "xpub661MyMwAqRbcEkraZqVPmws42AcnieiKPiR5gMaEpgEhfNLBWTk3VThcZtGWB5qcxcFy5guGh4tZTVjbb9zHpGSXUVoCWESDS2yN7dLBZha",
+    "networkType": "TestNet"
   }
 ]

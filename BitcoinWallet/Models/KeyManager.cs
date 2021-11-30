@@ -48,12 +48,12 @@ namespace BitcoinWallet.Models
             switch(networkType)
             {
                 case "MainNet":
-                    network = Network.Main;
+                    network = NBitcoin.Network.Main;
                     networkTypeImage = "btclogo.png";
                     break;
 
                 case "TestNet":
-                    network = Network.TestNet;
+                    network = NBitcoin.Network.TestNet;
                     networkTypeImage = "btclogoGrey.png";
                     break;
             }                

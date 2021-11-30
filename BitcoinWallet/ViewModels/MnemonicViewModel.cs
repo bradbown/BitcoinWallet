@@ -82,6 +82,9 @@ namespace BitcoinWallet.ViewModels
             PageTwo = (mnemonicPage == 1);
             MnemonicTestPage = (mnemonicPage == 2);
             BackEnabled = true;
+
+            if (mnemonicPage == 3)
+                App.Current.MainPage = new MainPage();
         }
     }
 }

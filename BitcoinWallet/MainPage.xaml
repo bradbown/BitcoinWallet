@@ -23,7 +23,7 @@
                 FontSize="46"
                 HorizontalOptions="Start" 
                 VerticalOptions="Start" />
-
+            
             <CollectionView 
                 Grid.Row="1"
                 ItemsSource="{Binding Wallets}"
