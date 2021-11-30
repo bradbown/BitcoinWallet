@@ -16,7 +16,7 @@ namespace BitcoinWallet
     {
         public NBitcoin.Network network;
         static readonly string filePathWindows = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
-        static readonly string filePathAndroid = Microsoft.Maui.Essentials.FileSystem.AppDataDirectory + "\\wallet.json";
+        static readonly string filePathAndroid = Microsoft.Maui.Essentials.FileSystem.AppDataDirectory;
 
         public Wallet(NBitcoin.Network network)
         {
@@ -28,7 +28,7 @@ namespace BitcoinWallet
             string filePath;
 
 #if __ANDROID__
-            filePath = filePathAndroid;
+            filePath = filePathAndroid + "/wallet.json";
 #else
             filePath = filePathWindows;
 #endif
@@ -76,7 +76,7 @@ namespace BitcoinWallet
             string filePath;
 
 #if __ANDROID__
-            filePath = filePathAndroid;
+            filePath = filePathAndroid + "/wallet.json";
 #else
             filePath = filePathWindows;
 #endif
@@ -95,7 +95,7 @@ namespace BitcoinWallet
             string filePath;
 
 #if __ANDROID__
-            filePath = filePathAndroid;
+            filePath = filePathAndroid + "/wallet.json";
 #else
             filePath = filePathWindows;
 #endif
@@ -103,10 +103,14 @@ namespace BitcoinWallet
             ObservableRangeCollection<KeyManager> walletList = new ObservableRangeCollection<KeyManager>();
             var jsonData = IO.ReadListFromFile(filePath);
 
-            foreach (var key in jsonData)
-                walletList.Add(key);
+            if (jsonData != null)
+            {
+                foreach (var key in jsonData)
+                    walletList.Add(key);
 
-            return walletList;
+                return walletList;
+            }
+            return null;
         }
     }
 }

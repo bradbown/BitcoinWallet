@@ -55,13 +55,17 @@ namespace BitcoinWallet
 
         public static List<KeyManager> ReadListFromFile(string filePath)
         {
-            string jsonFromFile;
-            using (var reader = new StreamReader(filePath))
+            if (DoesFileExist(filePath))
             {
-                jsonFromFile = reader.ReadToEnd();
-            }
+                string jsonFromFile;
+                using (var reader = new StreamReader(filePath))
+                {
+                    jsonFromFile = reader.ReadToEnd();
+                }
 
-            return JsonConvert.DeserializeObject<List<KeyManager>>(jsonFromFile);
+                return JsonConvert.DeserializeObject<List<KeyManager>>(jsonFromFile);
+            }
+            return null;
         }
     }
 }
