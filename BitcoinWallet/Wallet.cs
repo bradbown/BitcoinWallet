@@ -16,7 +16,7 @@ namespace BitcoinWallet
     {
         public NBitcoin.Network network;
         public string walletDirectory;
-        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\walletNet.json";
+        static string filePath = "D:\\Projects\\Bitcoin\\BitcoinWallet\\wallet.json";
 
         public Wallet(NBitcoin.Network network)
         {

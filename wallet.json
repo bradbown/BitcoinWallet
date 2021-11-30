@@ -2,21 +2,25 @@
   {
     "walletName": "wallet",
     "masterKeyFingerprint": "e1d2e7c3",
-    "extPubKey": "xpub661MyMwAqRbcFmQfGhTBexHeG3e2F88PGqX3yv4WQfiWBWpZXGNzE6y7GTi18F4aok2Ft8zsygYH1bptKKdoZeHNgyPthS1nB6dBojQaRas"
+    "extPubKey": "xpub661MyMwAqRbcFmQfGhTBexHeG3e2F88PGqX3yv4WQfiWBWpZXGNzE6y7GTi18F4aok2Ft8zsygYH1bptKKdoZeHNgyPthS1nB6dBojQaRas",
+    "networkType": "MainNet"
   },
   {
     "walletName": "test",
     "masterKeyFingerprint": "254cda35",
-    "extPubKey": "xpub661MyMwAqRbcFGnYXL2HSEGdNgwrpxwSXLP2t8KDWUYNxPAocD7PN42mXKBXRir4ykrQ7iu1TYAtzfjN2pwcBRkprd2vLgVwzGGUsvHs64N"
+    "extPubKey": "xpub661MyMwAqRbcFGnYXL2HSEGdNgwrpxwSXLP2t8KDWUYNxPAocD7PN42mXKBXRir4ykrQ7iu1TYAtzfjN2pwcBRkprd2vLgVwzGGUsvHs64N",
+    "networkType": "MainNet"
   },
   {
     "walletName": "wallet2",
     "masterKeyFingerprint": "d731d3c3",
-    "extPubKey": "xpub661MyMwAqRbcFe5EZnjyNba7Kytx6tdTFKc5Tb7QjZB3grL7XEic3tRjftcaFawVBYPYXVExF1gaCsFXhjAkVFgRSc58XSwryWx55TwDmft"
+    "extPubKey": "xpub661MyMwAqRbcFe5EZnjyNba7Kytx6tdTFKc5Tb7QjZB3grL7XEic3tRjftcaFawVBYPYXVExF1gaCsFXhjAkVFgRSc58XSwryWx55TwDmft",
+    "networkType": "MainNet"
   },
   {
     "walletName": "New Wallet",
     "masterKeyFingerprint": "048e3dc6",
-    "extPubKey": "xpub661MyMwAqRbcGFKVVkXQBWELVNnzBs8t1b4NopV5mAignJBN2mRSGvAyt3Hj46L9nztE8NmcjAPEJ4kD7zYHBTBdEuE9tsY4PH9dDuk678E"
+    "extPubKey": "xpub661MyMwAqRbcGFKVVkXQBWELVNnzBs8t1b4NopV5mAignJBN2mRSGvAyt3Hj46L9nztE8NmcjAPEJ4kD7zYHBTBdEuE9tsY4PH9dDuk678E",
+    "networkType": "MainNet"
   }
 ]
