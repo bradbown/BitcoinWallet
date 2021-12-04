@@ -6,7 +6,10 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DraculaWallet.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="DraculaWallet">
+        Title="DraculaWallet"
+		
+		TransparencyLevelHint="AcrylicBlur"
+        Background="{DynamicResource Purple}">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
