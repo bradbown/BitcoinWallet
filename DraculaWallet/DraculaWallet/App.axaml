@@ -11,20 +11,20 @@
     </Application.Styles>
 
 	<Application.Resources>
-		<SolidColorBrush x:Key="PrimaryColor">#512bdf</SolidColorBrush>
-		<SolidColorBrush x:Key="SecondaryColor">White</SolidColorBrush>
-		<SolidColorBrush x:Key="DisabledColor">LightGray</SolidColorBrush>
+		<Color x:Key="PrimaryColor">#512bdf</Color>
+		<Color x:Key="SecondaryColor">White</Color>
+		<Color x:Key="DisabledColor">LightGray</Color>
 
-		<SolidColorBrush x:Key="Background">#282a36</SolidColorBrush>
-		<SolidColorBrush x:Key="CurrentLine">#44475a</SolidColorBrush>
-		<SolidColorBrush x:Key="Foreground">#f8f8f2</SolidColorBrush>
-		<SolidColorBrush x:Key="Comment">#6272a4</SolidColorBrush>
-		<SolidColorBrush x:Key="Cyan">#8be9fd</SolidColorBrush>
-		<SolidColorBrush x:Key="Green">#50fa7b</SolidColorBrush>
-		<SolidColorBrush x:Key="Orange">#ffb86c</SolidColorBrush>
-		<SolidColorBrush x:Key="Pink">#ff79c6</SolidColorBrush>
-		<SolidColorBrush x:Key="Purple">#bd93f9</SolidColorBrush>
-		<SolidColorBrush x:Key="Red">#ff5555</SolidColorBrush>
-		<SolidColorBrush x:Key="Yellow">#f1fa8c</SolidColorBrush>
+		<Color x:Key="Background">#282a36</Color>
+		<Color x:Key="CurrentLine">#44475a</Color>
+		<Color x:Key="Foreground">#f8f8f2</Color>
+		<Color x:Key="Comment">#6272a4</Color>
+		<Color x:Key="Cyan">#8be9fd</Color>
+		<Color x:Key="Green">#50fa7b</Color>
+		<Color x:Key="Orange">#ffb86c</Color>
+		<Color x:Key="Pink">#ff79c6</Color>
+		<Color x:Key="Purple">#bd93f9</Color>
+		<Color x:Key="Red">#ff5555</Color>
+		<Color x:Key="Yellow">#f1fa8c</Color>
 	</Application.Resources>
 </Application>

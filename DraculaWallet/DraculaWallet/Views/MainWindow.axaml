@@ -9,12 +9,23 @@
         Title="DraculaWallet"
 		
 		TransparencyLevelHint="AcrylicBlur"
-        Background="{DynamicResource Purple}">
+        Background="{DynamicResource Background}"
+		ExtendClientAreaToDecorationsHint="True">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<TextBlock
+		Padding="20"
+		FontSize="28"
+		FontWeight="DemiBold"
+		Foreground="{DynamicResource Purple}">Bitcoin Wallet</TextBlock>
+
+	<!-- TODO Add Wallet collection view here -->
+	
+	
+	
+	<!-- TODO Add creator tool view here -->
 
 </Window>
