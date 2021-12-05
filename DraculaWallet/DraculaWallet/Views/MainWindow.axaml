@@ -16,11 +16,85 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<TextBlock
-		Padding="20"
-		FontSize="28"
-		FontWeight="DemiBold"
-		Foreground="{DynamicResource Purple}">Bitcoin Wallet</TextBlock>
+	<Panel>
+		<Grid Background="{DynamicResource Background}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Border
+				Grid.Column="0"
+				Grid.Row="0"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				<TextBlock
+					Padding="20"
+					FontSize="18"
+					FontWeight="Light"
+					Foreground="{DynamicResource Purple}"
+					Text="Dracula Wallet"/>
+			</Border>
+			<Border
+				Grid.Column="0"
+				Grid.Row="1"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				<TextBlock
+					Padding="20"
+					FontSize="18"
+					FontWeight="Light"
+					Foreground="{DynamicResource Purple}"
+					Text="Refresh"/>
+			</Border>
+			<Border
+				Grid.Column="0"
+				Grid.Row="2"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				<TextBlock
+					Padding="20"
+					FontSize="18"
+					FontWeight="Light"
+					Foreground="{DynamicResource Purple}"
+					Text="Home"/>
+			</Border>
+			<Border
+				Grid.Column="0"
+				Grid.Row="3"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				<TextBlock
+					Padding="20"
+					FontSize="18"
+					FontWeight="Light"
+					Foreground="{DynamicResource Purple}"
+					Text="Wallets"/>
+			</Border>
+			<Border
+				Grid.Column="0"
+				Grid.Row="4"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				<Rectangle
+					Grid.Column="0"
+					Grid.Row="4"
+					Fill="Transparent"/>
+			</Border>
+		</Grid>
+
+		<!--<TextBlock
+			Padding="20"
+			FontSize="28"
+			FontWeight="DemiBold"
+			Foreground="{DynamicResource Purple}">Bitcoin Wallet</TextBlock>-->
+
+	</Panel>
+
 
 	<!-- TODO Add Wallet collection view here -->
 	
