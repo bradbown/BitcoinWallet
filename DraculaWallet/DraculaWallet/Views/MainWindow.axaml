@@ -8,6 +8,9 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="DraculaWallet"
 		
+		Width="860"
+		Height="640"
+		
 		TransparencyLevelHint="AcrylicBlur"
         Background="{DynamicResource Background}"
 		ExtendClientAreaToDecorationsHint="True">
@@ -16,13 +19,73 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-	<Panel>
-		<Grid Background="{DynamicResource Background}">
+
+		<Grid ShowGridLines="False">
 			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+			
+			<Border Grid.Row="0" IsHitTestVisible="False"
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 0 1">
+				<Rectangle Fill="{DynamicResource Background}" Height="30" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+			</Border>
+
+			<Grid Grid.Row="1" ShowGridLines="True" >
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+				</Grid.RowDefinitions>
+				
+				<Border Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1"/>
+				<StackPanel Grid.Row="0" Orientation="Vertical" Margin="20 0">
+					<RadioButton
+						Content="Dracula Wallet"
+						Margin="0 10"
+						FontSize="18"
+						FontWeight="Light"
+						Foreground="{DynamicResource Purple}" />
+					<RadioButton
+						Content="Refresh"
+						Margin="0 10"
+						FontSize="18"
+						FontWeight="Light"
+						Foreground="{DynamicResource Purple}" />
+					<RadioButton
+						Content="Home"
+						Margin="0 10"
+						FontSize="18"
+						FontWeight="Light"
+						Foreground="{DynamicResource Purple}" />
+					<RadioButton
+						Content="Wallets"
+						Margin="0 10"
+						FontSize="18"
+						FontWeight="Light"
+						Foreground="{DynamicResource Purple}" />
+				</StackPanel>
+
+			</Grid>
+
+		</Grid>
+
+	<!-- TODO Add Wallet collection view here -->
+	
+	
+	
+	<!-- TODO Add creator tool view here -->
+
+</Window>
+
+<!--<Grid Background="{DynamicResource Background}">
+			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
@@ -68,7 +131,7 @@
 			<Border
 				Grid.Column="0"
 				Grid.Row="3"
-				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				Background="{DynamicResource Background}" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
 				<TextBlock
 					Padding="20"
 					FontSize="18"
@@ -79,27 +142,8 @@
 			<Border
 				Grid.Column="0"
 				Grid.Row="4"
-				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1">
+				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 0">
 				<Rectangle
-					Grid.Column="0"
-					Grid.Row="4"
-					Fill="Transparent"/>
+					Fill="Transparent" Height="1000"/>
 			</Border>
-		</Grid>
-
-		<!--<TextBlock
-			Padding="20"
-			FontSize="28"
-			FontWeight="DemiBold"
-			Foreground="{DynamicResource Purple}">Bitcoin Wallet</TextBlock>-->
-
-	</Panel>
-
-
-	<!-- TODO Add Wallet collection view here -->
-	
-	
-	
-	<!-- TODO Add creator tool view here -->
-
-</Window>
+		</Grid>-->
