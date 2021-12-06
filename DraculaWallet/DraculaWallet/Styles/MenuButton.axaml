@@ -16,12 +16,18 @@
 					<ControlTemplate TargetType="RadioButton">
 						<Grid VerticalAlignment="Stretch"
 							  HorizontalAlignment="Stretch"
-							  Background="{TemplateBinding Background}" 
-							  Margin="10">
+							  Background="{TemplateBinding Background}">
 
 							<TextBlock Text="{TemplateBinding Property=Content}"
 									   VerticalAlignment="Center"
-									   Foreground="{TemplateBinding Foreground}"/>
+									   Foreground="{TemplateBinding Foreground}"
+									   Margin="50 0 0 0"/>
+							
+							<Rectangle 
+									   IsVisible="{TemplateBinding IsVisible}"
+									   VerticalAlignment="Stretch"
+									   HorizontalAlignment="Right"
+									   Width="5"/>
 
 						</Grid>
 					</ControlTemplate>
@@ -29,6 +35,7 @@
 			</Setter>
 			
 			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Foreground" Value="{DynamicResource Purple}" />
 			<Setter Property="BorderThickness" Value="0" />
 			
 		</Style.Setters>
@@ -36,13 +43,31 @@
 
 	<Style Selector="RadioButton.MenuButton:pointerover">
 		<Style.Setters>
-			<Setter Property="Foreground" Value="{DynamicResource CurrentLine}" />
+			<Setter Property="Background" Value="{DynamicResource CurrentLine}" />
+			<Setter Property="IsVisible" Value="True" />
 		</Style.Setters>
 	</Style>
 
+	<Style Selector="RadioButton.MenuButton:pointerover /template/ Rectangle">
+		<Style.Setters>
+			<Setter Property="Fill" Value="{DynamicResource Purple}"/>
+			<Setter Property="IsVisible" Value="True" />
+		</Style.Setters>
+	</Style>
+	
+
 	<Style Selector="RadioButton.MenuButton:checked">
 		<Style.Setters>
-			<Setter Property="Foreground" Value="{DynamicResource CurrentLine}" />
+			<Setter Property="Background" Value="{DynamicResource CurrentLine}" />
+			<Setter Property="Foreground" Value="{DynamicResource Yellow}"/>
+			<Setter Property="IsVisible" Value="True" />
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="RadioButton.MenuButton:checked /template/ Rectangle">
+		<Style.Setters>
+			<Setter Property="Fill" Value="{DynamicResource Yellow}"/>
+			<Setter Property="IsVisible" Value="True" />
 		</Style.Setters>
 	</Style>
 </Styles>

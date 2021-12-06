@@ -49,28 +49,32 @@
 				</Grid.RowDefinitions>
 				
 				<Border Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1"/>
-				<StackPanel Grid.Row="0" Orientation="Vertical" Margin="20 0">
+				<StackPanel Grid.Row="0" Orientation="Vertical">
 					<RadioButton
 						Content="Dracula Wallet"
-						Margin="0 10"
+						Height="50"
+						Width="200"
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"/>
 					<RadioButton
 						Content="Refresh"
-						Margin="0 10"
+						Height="50"
+						Width="200"
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"/>
 					<RadioButton
 						Content="Home"
-						Margin="0 10"
+						Height="50"
+						Width="200"
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"/>
 					<RadioButton
 						Content="Wallets"
-						Margin="0 10"
+						Height="50"
+						Width="200"
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"/>
