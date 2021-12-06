@@ -1,0 +1,48 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <StackPanel>
+				<RadioButton Classes="MenuButton">Dracula Wallet</RadioButton>
+				<RadioButton Classes="MenuButton">Test</RadioButton>
+			</StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+	<Style Selector="RadioButton.MenuButton">
+		<Style.Setters>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="RadioButton">
+						<Grid VerticalAlignment="Stretch"
+							  HorizontalAlignment="Stretch"
+							  Background="{TemplateBinding Background}" 
+							  Margin="10">
+
+							<TextBlock Text="{TemplateBinding Property=Content}"
+									   VerticalAlignment="Center"
+									   Foreground="{TemplateBinding Foreground}"/>
+
+						</Grid>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+			
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="BorderThickness" Value="0" />
+			
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="RadioButton.MenuButton:pointerover">
+		<Style.Setters>
+			<Setter Property="Foreground" Value="{DynamicResource CurrentLine}" />
+		</Style.Setters>
+	</Style>
+
+	<Style Selector="RadioButton.MenuButton:checked">
+		<Style.Setters>
+			<Setter Property="Foreground" Value="{DynamicResource CurrentLine}" />
+		</Style.Setters>
+	</Style>
+</Styles>
