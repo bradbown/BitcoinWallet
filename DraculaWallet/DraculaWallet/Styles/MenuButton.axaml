@@ -19,15 +19,18 @@
 							  HorizontalAlignment="Stretch"
 							  Background="{TemplateBinding Background}">
 
-							<i:Icon Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Tag}" />
+							<i:Icon Value="{TemplateBinding Property=Tag}"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Left"
+									FontSize="28"
+									Margin="10 0 0 0" />
 							
 							<TextBlock Text="{TemplateBinding Property=Content}"
 									   VerticalAlignment="Center"
 									   Foreground="{TemplateBinding Foreground}"
-									   Margin="50 0 0 0"/>
+									   Margin="46 0 0 0"/>
 							
-							<Rectangle 
-									   IsVisible="{TemplateBinding IsVisible}"
+							<Rectangle IsVisible="{TemplateBinding IsVisible}"
 									   VerticalAlignment="Stretch"
 									   HorizontalAlignment="Right"
 									   Width="5"/>
