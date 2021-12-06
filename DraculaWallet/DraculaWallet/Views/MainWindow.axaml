@@ -56,7 +56,8 @@
 						Width="200"
 						FontSize="18"
 						FontWeight="Light"
-						Classes="MenuButton"/>
+						Classes="MenuButton"
+						Tag="fab fa-github"/>
 					<RadioButton
 						Content="Refresh"
 						Height="50"
