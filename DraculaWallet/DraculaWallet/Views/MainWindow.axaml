@@ -25,32 +25,14 @@
     </Design.DataContext>
 
 
-		<Grid ShowGridLines="False">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
-			
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-			</Grid.RowDefinitions>
-			
-			<Border Grid.Row="0" IsHitTestVisible="False"
+		<DockPanel>
+			<Border DockPanel.Dock="Top" IsHitTestVisible="False"
 				Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 0 1">
-				<Rectangle Fill="{DynamicResource Background}" Height="30" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
+				<Rectangle DockPanel.Dock="Top" Fill="{DynamicResource Background}" Height="29" IsHitTestVisible="False" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
 			</Border>
 
-			<Grid Grid.Row="1" ShowGridLines="True" >
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto"/>
-				</Grid.ColumnDefinitions>
-
-				<Grid.RowDefinitions>
-					<RowDefinition Height="Auto"/>
-				</Grid.RowDefinitions>
-				
-				<Border Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1"/>
-				<StackPanel Grid.Row="0" Orientation="Vertical">
+			<DockPanel DockPanel.Dock="Top">
+				<StackPanel DockPanel.Dock="Left" Orientation="Vertical">
 					<RadioButton
 						Content="Dracula Wallet"
 						Height="50"
@@ -58,7 +40,7 @@
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"
-						Tag="fab fa-bitcoin"/>
+						Tag="fas fa-teeth"/>
 					<RadioButton
 						Content="Refresh"
 						Height="50"
@@ -82,10 +64,17 @@
 						FontSize="18"
 						FontWeight="Light"
 						Classes="MenuButton"
-						Tag="fas fa-wallet"/>
+						Tag="fab fa-bitcoin"/>
 				</StackPanel>
-			</Grid>
-		</Grid>
+				<Border DockPanel.Dock="Left" Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1"/>
+
+				<StackPanel DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<TextBlock>
+						No wallet file detected
+					</TextBlock>
+				</StackPanel>
+			</DockPanel>
+		</DockPanel>
 
 	<!-- TODO Add Wallet collection view here -->
 	
