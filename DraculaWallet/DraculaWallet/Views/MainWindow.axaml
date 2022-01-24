@@ -14,7 +14,8 @@
 		
 		TransparencyLevelHint="AcrylicBlur"
         Background="{DynamicResource Background}"
-		ExtendClientAreaToDecorationsHint="True">
+		ExtendClientAreaToDecorationsHint="True"
+		WindowStartupLocation="CenterScreen">
 
 	<Window.Styles>
 		<StyleInclude Source="/Styles/MenuButton.axaml" />
@@ -68,10 +69,16 @@
 				</StackPanel>
 				<Border DockPanel.Dock="Left" Background="Transparent" BorderBrush="{DynamicResource CurrentLine}" BorderThickness="0 0 1 1"/>
 
-				<StackPanel DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock>
+				<StackPanel DockPanel.Dock="Left" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+					<TextBlock HorizontalAlignment="Center">
 						No wallet file detected
 					</TextBlock>
+					<Button 
+						Content="Generate Wallet"
+						Command="{ Binding CreateWalletCommand }"
+						Background="{DynamicResource Green}"
+						Foreground="Black"
+						HorizontalAlignment="Center"/>
 				</StackPanel>
 			</DockPanel>
 		</DockPanel>
